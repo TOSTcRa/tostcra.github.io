@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Адаптивний дизайн та форматування тексту в HTML5">
+    <title>Адаптивний дизайн та форматування тексту</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Адаптивний дизайн та форматування тексту</h1>
+            <p>Responsive Design та семантичні теги HTML5</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#responsive">Адаптивність</a></li>
+            <li><a href="#quotes">Цитати</a></li>
+            <li><a href="#abbreviations">Абревіатури</a></li>
+            <li><a href="#code-tags">Код</a></li>
+            <li><a href="#other-tags">Інші теги</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+
+        <section id="responsive">
+            <h2>Адаптивний дизайн</h2>
+            <p>Змініть розмір вікна браузера, щоб побачити адаптивність елементів.</p>
+
+            <h3>Responsive Grid (auto-fit)</h3>
+            <div class="responsive-grid">
+                <div class="card">
+                    <div class="card-img">🖥️</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Desktop</h4>
+                        <p class="card-text">Повноекранний режим для комп'ютерів та ноутбуків.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">📱</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Mobile</h4>
+                        <p class="card-text">Оптимізовано для смартфонів та планшетів.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">📐</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Flexible</h4>
+                        <p class="card-text">Гнучка сітка, що адаптується до будь-якого екрану.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Flexbox контейнер</h3>
+            <div class="flex-container">
+                <div class="flex-item">Flex Item 1</div>
+                <div class="flex-item">Flex Item 2</div>
+                <div class="flex-item">Flex Item 3</div>
+            </div>
+
+            <h3>Двоколонковий макет</h3>
+            <div class="two-columns">
+                <div>
+                    <p>Це основний контент сторінки. На великих екранах він займає 2/3 ширини, а на мобільних пристроях — всю ширину.</p>
+                    <p>Адаптивний дизайн використовує <code>@media</code> queries для зміни стилів залежно від розміру екрану.</p>
+                </div>
+                <div class="sidebar">
+                    <h4>Бічна панель</h4>
+                    <p>На мобільних пристроях ця панель переміщується під основний контент.</p>
+                </div>
+            </div>
+
+            <h3>Адаптивна таблиця</h3>
+            <div class="responsive-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Breakpoint</th>
+                            <th>Ширина</th>
+                            <th>Пристрої</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Extra small</td>
+                            <td>&lt; 576px</td>
+                            <td>Телефони (portrait)</td>
+                        </tr>
+                        <tr>
+                            <td>Small</td>
+                            <td>≥ 576px</td>
+                            <td>Телефони (landscape)</td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td>≥ 768px</td>
+                            <td>Планшети</td>
+                        </tr>
+                        <tr>
+                            <td>Large</td>
+                            <td>≥ 992px</td>
+                            <td>Ноутбуки</td>
+                        </tr>
+                        <tr>
+                            <td>Extra large</td>
+                            <td>≥ 1200px</td>
+                            <td>Десктопи</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="quotes">
+            <h2>Цитати: &lt;q&gt;, &lt;blockquote&gt;, &lt;cite&gt;</h2>
+
+            <h3>Тег &lt;q&gt; — короткі цитати</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;q&gt;</span></p>
+                <p>Тарас Шевченко казав: <q>Борітеся — поборете!</q> — ці слова надихають мільйони.</p>
+                <p>Як сказав Стів Джобс: <q lang="en">Stay hungry, stay foolish</q>.</p>
+            </div>
+
+            <h3>Тег &lt;blockquote&gt; — блокові цитати</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;blockquote&gt;</span></p>
+            </div>
+            <blockquote cite="https://uk.wikiquote.org/wiki/Тарас_Шевченко">
+                <p>Як умру, то поховайте мене на могилі, серед степу широкого, на Вкраїні милій, щоб лани широкополі, і Дніпро, і кручі було видно, було чути, як реве ревучий.</p>
+                <footer>— <cite>Тарас Шевченко</cite>, «Заповіт», <time datetime="1845">1845</time></footer>
+            </blockquote>
+
+            <blockquote>
+                <p>Єдиний спосіб робити велику роботу — любити те, що ви робите. Якщо ви ще не знайшли це, продовжуйте шукати. Не зупиняйтесь.</p>
+                <footer>— <cite>Стів Джобс</cite></footer>
+            </blockquote>
+
+            <h3>Тег &lt;cite&gt; — назви творів</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;cite&gt;</span></p>
+                <p>Роман <cite>«Кобзар»</cite> Тараса Шевченка є скарбницею української поезії.</p>
+                <p>У фільмі <cite>«Тіні забутих предків»</cite> Сергія Параджанова показано гуцульську культуру.</p>
+                <p>Картина <cite>«Зоряна ніч»</cite> Вінсента ван Гога — шедевр імпресіонізму.</p>
+            </div>
+        </section>
+
+        <section id="abbreviations">
+            <h2>Абревіатури та адреси: &lt;abbr&gt;, &lt;address&gt;</h2>
+
+            <h3>Тег &lt;abbr&gt; — абревіатури</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;abbr&gt;</span></p>
+                <p><abbr title="HyperText Markup Language">HTML</abbr> — мова розмітки гіпертексту.</p>
+                <p><abbr title="Cascading Style Sheets">CSS</abbr> використовується для стилізації веб-сторінок.</p>
+                <p><abbr title="World Wide Web Consortium">W3C</abbr> розробляє стандарти для вебу.</p>
+                <p>Сучасний веб-розробник працює з <abbr title="Application Programming Interface">API</abbr>, <abbr title="JavaScript Object Notation">JSON</abbr> та <abbr title="Representational State Transfer">REST</abbr>.</p>
+            </div>
+
+            <h3>Тег &lt;address&gt; — контактна інформація</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;address&gt;</span></p>
+            </div>
+            <address>
+                <strong>Веб-студія "Digital"</strong><br>
+                вул. Хрещатик, 1<br>
+                м. Київ, 01001<br>
+                Україна<br>
+                <a href="mailto:info@example.com">info@example.com</a><br>
+                <a href="tel:+380441234567">+380 (44) 123-45-67</a>
+            </address>
+        </section>
+
+        <section id="code-tags">
+            <h2>Теги для коду: &lt;code&gt;, &lt;pre&gt;, &lt;kbd&gt;, &lt;samp&gt;, &lt;var&gt;</h2>
+
+            <h3>Тег &lt;code&gt; — інлайн код</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;code&gt;</span></p>
+                <p>Функція <code>console.log()</code> виводить дані в консоль.</p>
+                <p>Використовуйте <code>&lt;div&gt;</code> для блокових елементів і <code>&lt;span&gt;</code> для інлайнових.</p>
+            </div>
+
+            <h3>Тег &lt;pre&gt; — форматований текст</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;pre&gt;</span></p>
+            </div>
+            <pre><code>function greet(name) {
+    return `Привіт, ${name}!`;
+}
+
+console.log(greet("Світ"));</code></pre>
+
+            <h3>Тег &lt;kbd&gt; — клавіатурний ввід</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;kbd&gt;</span></p>
+                <p>Натисніть <kbd>Ctrl</kbd> + <kbd>C</kbd> для копіювання.</p>
+                <p>Збережіть файл: <kbd>Ctrl</kbd> + <kbd>S</kbd></p>
+                <p>Відкрийте DevTools: <kbd>F12</kbd> або <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd></p>
+            </div>
+
+            <h3>Тег &lt;samp&gt; — вивід програми</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;samp&gt;</span></p>
+                <p>Програма вивела: <samp>Hello, World!</samp></p>
+                <p>Помилка: <samp>Error: File not found</samp></p>
+            </div>
+
+            <h3>Тег &lt;var&gt; — змінні</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;var&gt;</span></p>
+                <p>Площа прямокутника: <var>S</var> = <var>a</var> × <var>b</var></p>
+                <p>Формула: <var>E</var> = <var>m</var><var>c</var><sup>2</sup></p>
+            </div>
+        </section>
+
+        <section id="other-tags">
+            <h2>Інші теги форматування</h2>
+
+            <h3>Тег &lt;bdo&gt; — напрямок тексту</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;bdo&gt;</span></p>
+                <p>Звичайний текст: Привіт, світе!</p>
+                <p>Справа наліво: <bdo dir="rtl">Привіт, світе!</bdo></p>
+                <p>Арабський текст: <bdo dir="rtl">مرحبا بالعالم</bdo></p>
+            </div>
+
+            <h3>Тег &lt;mark&gt; — виділення</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;mark&gt;</span></p>
+                <p>У цьому тексті <mark>важливе слово</mark> виділено маркером.</p>
+                <p>Результати пошуку: Знайдено <mark>HTML5</mark> та <mark>CSS3</mark>.</p>
+            </div>
+
+            <h3>Теги &lt;del&gt; та &lt;ins&gt; — видалення та вставка</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;del&gt; &lt;ins&gt;</span></p>
+                <p>Ціна: <del>500 грн</del> <ins>350 грн</ins></p>
+                <p>Дата: <del datetime="2024-01-01">1 січня</del> <ins datetime="2024-01-15">15 січня</ins></p>
+            </div>
+
+            <h3>Тег &lt;s&gt; — неактуальний текст</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;s&gt;</span></p>
+                <p><s>Акція закінчилася</s> — більше не актуально</p>
+            </div>
+
+            <h3>Тег &lt;dfn&gt; — визначення терміну</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;dfn&gt;</span></p>
+                <p><dfn>HTML</dfn> — це стандартна мова розмітки для створення веб-сторінок.</p>
+                <p><dfn>Responsive design</dfn> — підхід до веб-дизайну, що забезпечує оптимальний перегляд на різних пристроях.</p>
+            </div>
+
+            <h3>Тег &lt;time&gt; — дата та час</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;time&gt;</span></p>
+                <p>Подія відбудеться <time datetime="2024-12-25">25 грудня 2024</time>.</p>
+                <p>Зустріч о <time datetime="14:30">14:30</time>.</p>
+                <p>Дедлайн: <time datetime="2024-12-31T23:59">31 грудня о 23:59</time>.</p>
+            </div>
+
+            <h3>Тег &lt;small&gt; — дрібний текст</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;small&gt;</span></p>
+                <p>Основний текст. <small>Це дрібний текст для приміток.</small></p>
+                <p>© 2024 Company. <small>Всі права захищено.</small></p>
+            </div>
+
+            <h3>Теги &lt;sub&gt; та &lt;sup&gt;</h3>
+            <div class="tag-demo">
+                <p><span class="tag-name">&lt;sub&gt; &lt;sup&gt;</span></p>
+                <p>Хімічна формула води: H<sub>2</sub>O</p>
+                <p>Квадрат числа: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup></p>
+                <p>Примітка<sup>[1]</sup> до тексту.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Адаптивний дизайн. <small>Змініть розмір вікна для перевірки адаптивності.</small></p>
+        <p><a href="../13/">Попередня робота</a> | <a href="https://tostcra.github.io/" target="_blank">GitHub Pages</a></p>
+    </footer>
+
+</body>
+</html>
