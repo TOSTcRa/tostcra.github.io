@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Робота з зображеннями</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            background-image: url('images/bg-main.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .paragraph-bg {
+            background-image: url('images/pattern.jpg');
+            background-size: 100px;
+            background-repeat: repeat;
+            padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            border-radius: 10px;
+        }
+
+        .block-bg {
+            background-image: url('images/photo1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            text-shadow: 2px 2px 5px black;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .images-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .img-solid {
+            border: 5px solid #3498db;
+        }
+
+        .img-dashed {
+            border: 4px dashed #e74c3c;
+        }
+
+        .img-double {
+            border: 6px double #27ae60;
+        }
+
+        .img-groove {
+            border: 5px groove #9b59b6;
+        }
+
+        .img-ridge {
+            border: 5px ridge #f39c12;
+        }
+
+        .img-inset {
+            border: 5px inset #1abc9c;
+        }
+
+        .img-outset {
+            border: 5px outset #e91e63;
+        }
+
+        .border-image-box {
+            width: 300px;
+            height: 200px;
+            border: 20px solid transparent;
+            border-image: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3) 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+
+        .border-image-box2 {
+            width: 300px;
+            height: 200px;
+            border: 15px solid transparent;
+            border-image: repeating-linear-gradient(45deg, #667eea, #667eea 10px, #764ba2 10px, #764ba2 20px) 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+
+        .radius-small {
+            border-radius: 10px;
+        }
+
+        .radius-medium {
+            border-radius: 25px;
+        }
+
+        .radius-large {
+            border-radius: 50px;
+        }
+
+        .radius-circle {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .radius-different {
+            border-radius: 10px 50px 10px 50px;
+        }
+
+        .shadow-simple {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .shadow-blur {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .shadow-color {
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.6);
+        }
+
+        .shadow-inset {
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .shadow-multiple {
+            box-shadow:
+                5px 5px 10px rgba(231, 76, 60, 0.5),
+                -5px -5px 10px rgba(52, 152, 219, 0.5),
+                0 0 20px rgba(46, 204, 113, 0.3);
+        }
+
+        .multi-bg {
+            width: 100%;
+            height: 300px;
+            background-image:
+                url('images/small1.jpg'),
+                url('images/small2.jpg'),
+                linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-position:
+                top left,
+                bottom right,
+                center;
+            background-size:
+                100px 100px,
+                100px 100px,
+                cover;
+            background-repeat:
+                no-repeat,
+                no-repeat,
+                no-repeat;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        .example-box {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .example-box img {
+            display: block;
+            max-width: 200px;
+            height: auto;
+        }
+
+        .example-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Робота з зображеннями</h1>
+
+        <h2>Фонове зображення документу</h2>
+        <p>Фонове зображення встановлено для всього документу (body) з файлу images/bg-main.jpg</p>
+
+        <h2>Фонове зображення до абзацу</h2>
+        <p class="paragraph-bg">
+            Цей абзац має фонове зображення-патерн, яке повторюється.
+            Використано властивості background-image, background-size та background-repeat.
+        </p>
+
+        <h2>Фонове зображення до блоку</h2>
+        <div class="block-bg">
+            Блок з фоновим зображенням
+        </div>
+
+        <h2>Вставка зображень через &lt;img&gt;</h2>
+        <div class="images-container">
+            <img src="images/photo1.jpg" alt="Фото 1" width="300">
+            <img src="images/photo2.jpg" alt="Фото 2" width="300">
+            <img src="images/photo3.jpg" alt="Фото 3" width="300">
+        </div>
+
+        <h2>Різноманітні рамки (border)</h2>
+        <div class="images-container">
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Solid" class="img-solid">
+                <p>solid</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo2.jpg" alt="Dashed" class="img-dashed">
+                <p>dashed</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo3.jpg" alt="Double" class="img-double">
+                <p>double</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Groove" class="img-groove">
+                <p>groove</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo2.jpg" alt="Ridge" class="img-ridge">
+                <p>ridge</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo3.jpg" alt="Inset" class="img-inset">
+                <p>inset</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Outset" class="img-outset">
+                <p>outset</p>
+            </div>
+        </div>
+
+        <h2>Рамки з border-image</h2>
+        <div class="images-container">
+            <div class="border-image-box">
+                <span>Градієнтна рамка</span>
+            </div>
+            <div class="border-image-box2">
+                <span>Повторюваний градієнт</span>
+            </div>
+        </div>
+
+        <h2>Закруглення рамок (border-radius)</h2>
+        <div class="images-container">
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Small radius" class="radius-small">
+                <p>10px</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo2.jpg" alt="Medium radius" class="radius-medium">
+                <p>25px</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo3.jpg" alt="Large radius" class="radius-large">
+                <p>50px</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Circle" class="radius-circle">
+                <p>50% (коло)</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo2.jpg" alt="Different corners" class="radius-different">
+                <p>різні кути</p>
+            </div>
+        </div>
+
+        <h2>Тіні (box-shadow)</h2>
+        <div class="images-container">
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Simple shadow" class="shadow-simple">
+                <p>проста тінь</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo2.jpg" alt="Blur shadow" class="shadow-blur">
+                <p>розмита тінь</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo3.jpg" alt="Color shadow" class="shadow-color">
+                <p>кольорова тінь</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo1.jpg" alt="Inset shadow" class="shadow-inset">
+                <p>внутрішня тінь</p>
+            </div>
+            <div class="example-box">
+                <img src="images/photo2.jpg" alt="Multiple shadows" class="shadow-multiple">
+                <p>декілька тіней</p>
+            </div>
+        </div>
+
+        <h2>Декілька фонових зображень в одному блоці</h2>
+        <div class="multi-bg">
+            Блок з трьома фоновими шарами: два зображення + градієнт
+        </div>
+    </div>
+</body>
+</html>

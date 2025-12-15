@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Градієнти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .box span {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .linear-1 {
+            background: linear-gradient(red, blue);
+        }
+
+        .linear-2 {
+            background: linear-gradient(to right, red, blue);
+        }
+
+        .linear-3 {
+            background: linear-gradient(to bottom right, red, yellow, blue);
+        }
+
+        .linear-4 {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+        }
+
+        .linear-5 {
+            background: linear-gradient(90deg, #a8e6cf, #dcedc1, #ffd3a5);
+        }
+
+        .linear-6 {
+            background: linear-gradient(180deg, #667eea, #764ba2);
+        }
+
+        .radial-1 {
+            background: radial-gradient(red, blue);
+        }
+
+        .radial-2 {
+            background: radial-gradient(circle, red, blue);
+        }
+
+        .radial-3 {
+            background: radial-gradient(ellipse at top, #ffecd2, #fcb69f);
+        }
+
+        .radial-4 {
+            background: radial-gradient(circle at bottom left, #a1c4fd, #c2e9fb);
+        }
+
+        .radial-5 {
+            background: radial-gradient(circle, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+        }
+
+        .radial-6 {
+            background: radial-gradient(ellipse at center, #f093fb, #f5576c);
+        }
+
+        .conic-1 {
+            background: conic-gradient(red, yellow, green, blue, red);
+        }
+
+        .conic-2 {
+            background: conic-gradient(from 90deg, red, yellow, green);
+        }
+
+        .conic-3 {
+            background: conic-gradient(at 50% 50%, #fd79a8, #6c5ce7, #00cec9, #fd79a8);
+        }
+
+        .conic-4 {
+            background: conic-gradient(from 0deg at center, #f12711, #f5af19, #f12711);
+        }
+
+        .repeating-1 {
+            background: repeating-linear-gradient(45deg, red, red 10px, blue 10px, blue 20px);
+        }
+
+        .repeating-2 {
+            background: repeating-linear-gradient(90deg, #ffeaa7 0px, #ffeaa7 20px, #fdcb6e 20px, #fdcb6e 40px);
+        }
+
+        .repeating-3 {
+            background: repeating-radial-gradient(circle, #74b9ff, #74b9ff 10px, #0984e3 10px, #0984e3 20px);
+        }
+
+        .repeating-4 {
+            background: repeating-radial-gradient(ellipse at center, #55efc4, #55efc4 15px, #00b894 15px, #00b894 30px);
+        }
+
+        .repeating-5 {
+            background: repeating-conic-gradient(#e17055 0deg 30deg, #fab1a0 30deg 60deg);
+        }
+
+        .repeating-6 {
+            background: repeating-linear-gradient(to right, #dfe6e9 0px, #dfe6e9 5px, #b2bec3 5px, #b2bec3 10px);
+        }
+    </style>
+</head>
+<body>
+    <h1>Приклади градієнтних заливок</h1>
+
+    <h2>Linear Gradient (Лінійний градієнт)</h2>
+    <div class="container">
+        <div class="box linear-1"><span>linear-gradient(red, blue)</span></div>
+        <div class="box linear-2"><span>to right, red, blue</span></div>
+        <div class="box linear-3"><span>to bottom right, 3 кольори</span></div>
+        <div class="box linear-4"><span>45deg</span></div>
+        <div class="box linear-5"><span>90deg, 3 кольори</span></div>
+        <div class="box linear-6"><span>180deg</span></div>
+    </div>
+
+    <h2>Radial Gradient (Радіальний градієнт)</h2>
+    <div class="container">
+        <div class="box radial-1"><span>radial-gradient(red, blue)</span></div>
+        <div class="box radial-2"><span>circle</span></div>
+        <div class="box radial-3"><span>ellipse at top</span></div>
+        <div class="box radial-4"><span>circle at bottom left</span></div>
+        <div class="box radial-5"><span>circle з %</span></div>
+        <div class="box radial-6"><span>ellipse at center</span></div>
+    </div>
+
+    <h2>Conic Gradient (Конічний градієнт)</h2>
+    <div class="container">
+        <div class="box conic-1"><span>conic-gradient</span></div>
+        <div class="box conic-2"><span>from 90deg</span></div>
+        <div class="box conic-3"><span>at 50% 50%</span></div>
+        <div class="box conic-4"><span>from 0deg at center</span></div>
+    </div>
+
+    <h2>Repeating Gradient (Повторюваний градієнт)</h2>
+    <div class="container">
+        <div class="box repeating-1"><span>repeating-linear 45deg</span></div>
+        <div class="box repeating-2"><span>repeating-linear 90deg</span></div>
+        <div class="box repeating-3"><span>repeating-radial circle</span></div>
+        <div class="box repeating-4"><span>repeating-radial ellipse</span></div>
+        <div class="box repeating-5"><span>repeating-conic</span></div>
+        <div class="box repeating-6"><span>repeating-linear смуги</span></div>
+    </div>
+</body>
+</html>

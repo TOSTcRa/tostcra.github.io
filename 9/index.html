@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Форми</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HTML Форми</h1>
+        <p>Приклади різних типів форм та елементів введення</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#text-inputs">Текстові поля</a></li>
+            <li><a href="#selects">Списки</a></li>
+            <li><a href="#checkboxes">Checkbox/Radio</a></li>
+            <li><a href="#other-inputs">Інші типи</a></li>
+            <li><a href="#js-forms">JavaScript форми</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="text-inputs">
+            <h2>Текстові поля введення</h2>
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="text1">Text (звичайний текст):</label>
+                        <input type="text" id="text1" name="text1" placeholder="Введіть текст">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email1">Email (електронна пошта):</label>
+                        <input type="email" id="email1" name="email1" placeholder="example@mail.com">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password1">Password (пароль):</label>
+                        <input type="password" id="password1" name="password1" placeholder="Введіть пароль">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tel1">Tel (телефон):</label>
+                        <input type="tel" id="tel1" name="tel1" placeholder="+380 XX XXX XXXX">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="url1">URL (посилання):</label>
+                        <input type="url" id="url1" name="url1" placeholder="https://example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="search1">Search (пошук):</label>
+                        <input type="search" id="search1" name="search1" placeholder="Шукати...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="textarea1">Textarea (багаторядковий текст):</label>
+                    <textarea id="textarea1" name="textarea1" placeholder="Введіть ваше повідомлення..."></textarea>
+                </div>
+
+                <h3>Атрибути текстових полів</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="required1">Required (обов'язкове):</label>
+                        <input type="text" id="required1" name="required1" required placeholder="Це поле обов'язкове">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="readonly1">Readonly (тільки читання):</label>
+                        <input type="text" id="readonly1" name="readonly1" value="Не можна редагувати" readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="disabled1">Disabled (вимкнене):</label>
+                        <input type="text" id="disabled1" name="disabled1" value="Вимкнене поле" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxlength1">Maxlength (макс. 10 символів):</label>
+                        <input type="text" id="maxlength1" name="maxlength1" maxlength="10" placeholder="Максимум 10">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pattern1">Pattern (тільки літери):</label>
+                        <input type="text" id="pattern1" name="pattern1" pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ]+" title="Тільки літери" placeholder="Тільки літери">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="datalist1">Datalist (з підказками):</label>
+                        <input type="text" id="datalist1" name="datalist1" list="cities" placeholder="Оберіть місто">
+                        <datalist id="cities">
+                            <option value="Київ">
+                            <option value="Львів">
+                            <option value="Одеса">
+                            <option value="Харків">
+                            <option value="Дніпро">
+                        </datalist>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section id="selects">
+            <h2>Списки вибору (Select)</h2>
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="select1">Звичайний select:</label>
+                        <select id="select1" name="select1">
+                            <option value="">Оберіть варіант</option>
+                            <option value="1">Варіант 1</option>
+                            <option value="2">Варіант 2</option>
+                            <option value="3">Варіант 3</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select2">Select з групами (optgroup):</label>
+                        <select id="select2" name="select2">
+                            <option value="">Оберіть мову</option>
+                            <optgroup label="Frontend">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">JavaScript</option>
+                            </optgroup>
+                            <optgroup label="Backend">
+                                <option value="php">PHP</option>
+                                <option value="python">Python</option>
+                                <option value="java">Java</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="select3">Multiple select (множинний вибір):</label>
+                    <select id="select3" name="select3" multiple>
+                        <option value="reading">Читання</option>
+                        <option value="music">Музика</option>
+                        <option value="sports">Спорт</option>
+                        <option value="travel">Подорожі</option>
+                        <option value="cooking">Кулінарія</option>
+                        <option value="gaming">Ігри</option>
+                    </select>
+                    <small>Утримуйте Ctrl для множинного вибору</small>
+                </div>
+            </form>
+        </section>
+
+        <section id="checkboxes">
+            <h2>Checkbox та Radio</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Checkbox (множинний вибір)</legend>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="skills" value="html"> HTML
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="css" checked> CSS (обрано за замовчуванням)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="js"> JavaScript
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="react"> React
+                        </label>
+                        <label>
+                            <input type="checkbox" name="skills" value="node" disabled> Node.js (вимкнено)
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Radio (один вибір)</legend>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="male"> Чоловіча
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="female"> Жіноча
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="other" checked> Інша (обрано)
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Рівень досвіду</legend>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="level" value="junior"> Junior
+                        </label>
+                        <label>
+                            <input type="radio" name="level" value="middle"> Middle
+                        </label>
+                        <label>
+                            <input type="radio" name="level" value="senior"> Senior
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="other-inputs">
+            <h2>Інші типи полів</h2>
+
+            <form>
+                <h3>Дата та час</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date1">Date (дата):</label>
+                        <input type="date" id="date1" name="date1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time1">Time (час):</label>
+                        <input type="time" id="time1" name="time1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="datetime1">Datetime-local:</label>
+                        <input type="datetime-local" id="datetime1" name="datetime1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="month1">Month (місяць):</label>
+                        <input type="month" id="month1" name="month1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="week1">Week (тиждень):</label>
+                        <input type="week" id="week1" name="week1">
+                    </div>
+                </div>
+
+                <h3>Числа</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="number1">Number (число):</label>
+                        <input type="number" id="number1" name="number1" min="0" max="100" step="1" value="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="range1">Range (повзунок): <span id="rangeValue" class="slider-value">50</span></label>
+                        <input type="range" id="range1" name="range1" min="0" max="100" value="50" oninput="document.getElementById('rangeValue').textContent = this.value">
+                    </div>
+                </div>
+
+                <h3>Колір та файл</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="color1">Color (колір):</label>
+                        <input type="color" id="color1" name="color1" value="#00b894">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="file1">File (файл):</label>
+                        <input type="file" id="file1" name="file1" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="file2">Multiple files (кілька файлів):</label>
+                    <input type="file" id="file2" name="file2" multiple>
+                </div>
+
+                <h3>Progress та Meter</h3>
+                <div class="form-group">
+                    <label>Progress (прогрес завантаження):</label>
+                    <progress value="70" max="100"></progress>
+                </div>
+
+                <div class="form-group">
+                    <label>Meter (показник):</label>
+                    <meter value="0.7" min="0" max="1" low="0.3" high="0.7" optimum="0.8"></meter>
+                </div>
+
+                <h3>Hidden</h3>
+                <div class="form-group">
+                    <label>Hidden (приховане поле - не видно):</label>
+                    <input type="hidden" name="hidden1" value="secret_value">
+                    <small>Це поле приховане, але передається з формою</small>
+                </div>
+            </form>
+        </section>
+
+        <section id="js-forms">
+            <h2>Форми з JavaScript</h2>
+
+            <h3>Калькулятор</h3>
+            <div class="calculator">
+                <input type="text" id="calcDisplay" readonly value="0">
+                <div class="calc-buttons">
+                    <button type="button" class="calc-btn" onclick="clearCalc()">C</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('(')">(</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc(')')">)</button>
+                    <button type="button" class="calc-btn operator" onclick="appendToCalc('/')">/</button>
+
+                    <button type="button" class="calc-btn" onclick="appendToCalc('7')">7</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('8')">8</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('9')">9</button>
+                    <button type="button" class="calc-btn operator" onclick="appendToCalc('*')">*</button>
+
+                    <button type="button" class="calc-btn" onclick="appendToCalc('4')">4</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('5')">5</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('6')">6</button>
+                    <button type="button" class="calc-btn operator" onclick="appendToCalc('-')">-</button>
+
+                    <button type="button" class="calc-btn" onclick="appendToCalc('1')">1</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('2')">2</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('3')">3</button>
+                    <button type="button" class="calc-btn operator" onclick="appendToCalc('+')">+</button>
+
+                    <button type="button" class="calc-btn" onclick="appendToCalc('0')">0</button>
+                    <button type="button" class="calc-btn" onclick="appendToCalc('.')">.</button>
+                    <button type="button" class="calc-btn equals" onclick="calculate()">=</button>
+                </div>
+            </div>
+
+            <h3>Конвертери</h3>
+            <div class="converters-grid">
+                <div class="converter-card">
+                    <h4>Конвертер температури</h4>
+                    <div class="form-group">
+                        <label for="celsius">Цельсій (°C):</label>
+                        <input type="number" id="celsius" placeholder="Введіть °C" oninput="convertTemp('c')">
+                    </div>
+                    <div class="form-group">
+                        <label for="fahrenheit">Фаренгейт (°F):</label>
+                        <input type="number" id="fahrenheit" placeholder="Введіть °F" oninput="convertTemp('f')">
+                    </div>
+                </div>
+
+                <div class="converter-card">
+                    <h4>Конвертер довжини</h4>
+                    <div class="form-group">
+                        <label for="km">Кілометри (км):</label>
+                        <input type="number" id="km" placeholder="Введіть км" oninput="convertLength('km')">
+                    </div>
+                    <div class="form-group">
+                        <label for="miles">Милі:</label>
+                        <input type="number" id="miles" placeholder="Введіть милі" oninput="convertLength('mi')">
+                    </div>
+                </div>
+
+                <div class="converter-card">
+                    <h4>Конвертер ваги</h4>
+                    <div class="form-group">
+                        <label for="kg">Кілограми (кг):</label>
+                        <input type="number" id="kg" placeholder="Введіть кг" oninput="convertWeight('kg')">
+                    </div>
+                    <div class="form-group">
+                        <label for="lbs">Фунти (lbs):</label>
+                        <input type="number" id="lbs" placeholder="Введіть lbs" oninput="convertWeight('lbs')">
+                    </div>
+                </div>
+            </div>
+
+            <h3>Форма реєстрації з валідацією</h3>
+            <form id="registrationForm" onsubmit="validateForm(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regName">Ім'я:</label>
+                        <input type="text" id="regName" name="regName" required minlength="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="regEmail">Email:</label>
+                        <input type="email" id="regEmail" name="regEmail" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="regPassword">Пароль:</label>
+                        <input type="password" id="regPassword" name="regPassword" required minlength="6">
+                    </div>
+                    <div class="form-group">
+                        <label for="regPassword2">Підтвердження паролю:</label>
+                        <input type="password" id="regPassword2" name="regPassword2" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="regAge">Вік:</label>
+                    <input type="number" id="regAge" name="regAge" min="18" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="regAgree" required>
+                        Я погоджуюсь з умовами використання
+                    </label>
+                </div>
+
+                <div class="buttons-row">
+                    <button type="submit">Зареєструватися</button>
+                    <input type="reset" value="Очистити">
+                </div>
+
+                <div id="formResult" class="result-box" style="display: none;"></div>
+            </form>
+
+            <h3>Обчислення площі фігур</h3>
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <label for="figureSelect">Оберіть фігуру:</label>
+                    <select id="figureSelect" onchange="showFigureInputs()">
+                        <option value="">Оберіть фігуру</option>
+                        <option value="rectangle">Прямокутник</option>
+                        <option value="circle">Коло</option>
+                        <option value="triangle">Трикутник</option>
+                    </select>
+                </div>
+
+                <div id="rectangleInputs" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="rectWidth">Ширина:</label>
+                            <input type="number" id="rectWidth" min="0" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="rectHeight">Висота:</label>
+                            <input type="number" id="rectHeight" min="0" step="0.1">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="circleInputs" style="display: none;">
+                    <div class="form-group">
+                        <label for="circleRadius">Радіус:</label>
+                        <input type="number" id="circleRadius" min="0" step="0.1">
+                    </div>
+                </div>
+
+                <div id="triangleInputs" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="triBase">Основа:</label>
+                            <input type="number" id="triBase" min="0" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="triHeight">Висота:</label>
+                            <input type="number" id="triHeight" min="0" step="0.1">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" onclick="calculateArea()">Обчислити площу</button>
+                <div id="areaResult" class="result-box" style="display: none;"></div>
+            </form>
+
+            <h3>Генератор паролів</h3>
+            <form onsubmit="return false;">
+                <div class="form-group">
+                    <label for="passLength">Довжина паролю: <span id="passLengthValue" class="slider-value">12</span></label>
+                    <input type="range" id="passLength" min="6" max="32" value="12" oninput="document.getElementById('passLengthValue').textContent = this.value">
+                </div>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="passUpper" checked> Великі літери (A-Z)</label>
+                    <label><input type="checkbox" id="passLower" checked> Малі літери (a-z)</label>
+                    <label><input type="checkbox" id="passNumbers" checked> Цифри (0-9)</label>
+                    <label><input type="checkbox" id="passSymbols"> Спецсимволи (!@#$%)</label>
+                </div>
+
+                <button type="button" onclick="generatePassword()">Згенерувати пароль</button>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="generatedPass">Згенерований пароль:</label>
+                    <input type="text" id="generatedPass" readonly>
+                </div>
+
+                <button type="button" onclick="copyPassword()" class="btn-info">Копіювати</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 HTML Форми</p>
+        <p><a href="../8/">Попередня робота</a> | <a href="https://tostcra.github.io/" target="_blank">GitHub Pages</a></p>
+    </footer>
+
+    <script>
+        // Калькулятор
+        let calcExpression = '';
+
+        function appendToCalc(value) {
+            if (calcExpression === '0' && value !== '.') {
+                calcExpression = value;
+            } else {
+                calcExpression += value;
+            }
+            document.getElementById('calcDisplay').value = calcExpression;
+        }
+
+        function clearCalc() {
+            calcExpression = '';
+            document.getElementById('calcDisplay').value = '0';
+        }
+
+        function calculate() {
+            try {
+                let result = eval(calcExpression);
+                document.getElementById('calcDisplay').value = result;
+                calcExpression = result.toString();
+            } catch (e) {
+                document.getElementById('calcDisplay').value = 'Помилка';
+                calcExpression = '';
+            }
+        }
+
+        // Конвертер температури
+        function convertTemp(from) {
+            let celsius = document.getElementById('celsius');
+            let fahrenheit = document.getElementById('fahrenheit');
+
+            if (from === 'c' && celsius.value !== '') {
+                fahrenheit.value = (parseFloat(celsius.value) * 9/5 + 32).toFixed(2);
+            } else if (from === 'f' && fahrenheit.value !== '') {
+                celsius.value = ((parseFloat(fahrenheit.value) - 32) * 5/9).toFixed(2);
+            }
+        }
+
+        // Конвертер довжини
+        function convertLength(from) {
+            let km = document.getElementById('km');
+            let miles = document.getElementById('miles');
+
+            if (from === 'km' && km.value !== '') {
+                miles.value = (parseFloat(km.value) * 0.621371).toFixed(4);
+            } else if (from === 'mi' && miles.value !== '') {
+                km.value = (parseFloat(miles.value) / 0.621371).toFixed(4);
+            }
+        }
+
+        // Конвертер ваги
+        function convertWeight(from) {
+            let kg = document.getElementById('kg');
+            let lbs = document.getElementById('lbs');
+
+            if (from === 'kg' && kg.value !== '') {
+                lbs.value = (parseFloat(kg.value) * 2.20462).toFixed(4);
+            } else if (from === 'lbs' && lbs.value !== '') {
+                kg.value = (parseFloat(lbs.value) / 2.20462).toFixed(4);
+            }
+        }
+
+        // Валідація форми реєстрації
+        function validateForm(event) {
+            event.preventDefault();
+
+            let name = document.getElementById('regName').value;
+            let email = document.getElementById('regEmail').value;
+            let password = document.getElementById('regPassword').value;
+            let password2 = document.getElementById('regPassword2').value;
+            let age = document.getElementById('regAge').value;
+            let agree = document.getElementById('regAgree').checked;
+
+            let resultBox = document.getElementById('formResult');
+            resultBox.style.display = 'block';
+
+            if (password !== password2) {
+                resultBox.className = 'result-box error';
+                resultBox.innerHTML = 'Паролі не співпадають!';
+                return;
+            }
+
+            if (parseInt(age) < 18) {
+                resultBox.className = 'result-box error';
+                resultBox.innerHTML = 'Вам має бути 18 або більше років!';
+                return;
+            }
+
+            resultBox.className = 'result-box success';
+            resultBox.innerHTML = 'Реєстрація успішна!<br>Ім\'я: ' + name + '<br>Email: ' + email + '<br>Вік: ' + age;
+        }
+
+        // Обчислення площі
+        function showFigureInputs() {
+            let figure = document.getElementById('figureSelect').value;
+
+            document.getElementById('rectangleInputs').style.display = 'none';
+            document.getElementById('circleInputs').style.display = 'none';
+            document.getElementById('triangleInputs').style.display = 'none';
+            document.getElementById('areaResult').style.display = 'none';
+
+            if (figure === 'rectangle') {
+                document.getElementById('rectangleInputs').style.display = 'block';
+            } else if (figure === 'circle') {
+                document.getElementById('circleInputs').style.display = 'block';
+            } else if (figure === 'triangle') {
+                document.getElementById('triangleInputs').style.display = 'block';
+            }
+        }
+
+        function calculateArea() {
+            let figure = document.getElementById('figureSelect').value;
+            let resultBox = document.getElementById('areaResult');
+            let area = 0;
+
+            if (figure === 'rectangle') {
+                let width = parseFloat(document.getElementById('rectWidth').value);
+                let height = parseFloat(document.getElementById('rectHeight').value);
+                area = width * height;
+            } else if (figure === 'circle') {
+                let radius = parseFloat(document.getElementById('circleRadius').value);
+                area = Math.PI * radius * radius;
+            } else if (figure === 'triangle') {
+                let base = parseFloat(document.getElementById('triBase').value);
+                let height = parseFloat(document.getElementById('triHeight').value);
+                area = 0.5 * base * height;
+            }
+
+            if (!isNaN(area) && area > 0) {
+                resultBox.style.display = 'block';
+                resultBox.className = 'result-box success';
+                resultBox.innerHTML = 'Площа: ' + area.toFixed(2);
+            } else {
+                resultBox.style.display = 'block';
+                resultBox.className = 'result-box error';
+                resultBox.innerHTML = 'Введіть коректні значення!';
+            }
+        }
+
+        // Генератор паролів
+        function generatePassword() {
+            let length = document.getElementById('passLength').value;
+            let useUpper = document.getElementById('passUpper').checked;
+            let useLower = document.getElementById('passLower').checked;
+            let useNumbers = document.getElementById('passNumbers').checked;
+            let useSymbols = document.getElementById('passSymbols').checked;
+
+            let chars = '';
+            if (useUpper) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            if (useLower) chars += 'abcdefghijklmnopqrstuvwxyz';
+            if (useNumbers) chars += '0123456789';
+            if (useSymbols) chars += '!@#$%^&*()_+-=[]{}|;:,.<>?';
+
+            if (chars === '') {
+                alert('Оберіть хоча б один тип символів!');
+                return;
+            }
+
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                password += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+
+            document.getElementById('generatedPass').value = password;
+        }
+
+        function copyPassword() {
+            let passField = document.getElementById('generatedPass');
+            passField.select();
+            document.execCommand('copy');
+            alert('Пароль скопійовано!');
+        }
+    </script>
+</body>
+</html>

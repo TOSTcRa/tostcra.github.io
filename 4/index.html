@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форматування символів</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;700;900&family=Open+Sans:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Форматування символів</h1>
+
+    <h2>HTML теги форматування</h2>
+    <div class="example-block">
+        <p><b>Жирний текст (b)</b></p>
+        <p><strong>Важливий текст (strong)</strong></p>
+        <p><i>Курсив (i)</i></p>
+        <p><em>Виділений текст (em)</em></p>
+        <p><u>Підкреслений текст (u)</u></p>
+        <p><s>Закреслений текст (s)</s></p>
+        <p><del>Видалений текст (del)</del></p>
+        <p><ins>Вставлений текст (ins)</ins></p>
+        <p><mark>Виділений маркером (mark)</mark></p>
+        <p><small>Малий текст (small)</small></p>
+        <p>Текст <sub>нижній індекс (sub)</sub></p>
+        <p>Текст <sup>верхній індекс (sup)</sup></p>
+        <p><code>Код (code)</code></p>
+        <p><kbd>Клавіатура (kbd)</kbd></p>
+        <p><samp>Приклад виводу (samp)</samp></p>
+        <p><var>Змінна (var)</var></p>
+        <p><abbr title="HyperText Markup Language">HTML</abbr> - абревіатура (abbr)</p>
+        <p><q>Коротка цитата (q)</q></p>
+        <p><cite>Назва твору (cite)</cite></p>
+        <p><dfn>Визначення терміну (dfn)</dfn></p>
+    </div>
+
+    <h2>Google Fonts</h2>
+    <div class="example-block">
+        <p class="font-roboto">Roboto - сучасний шрифт від Google</p>
+        <p class="font-playfair">Playfair Display - елегантний шрифт з засічками</p>
+        <p class="font-montserrat">Montserrat - геометричний sans-serif шрифт</p>
+        <p class="font-lobster">Lobster - декоративний рукописний шрифт</p>
+        <p class="font-opensans">Open Sans - чіткий та читабельний шрифт</p>
+    </div>
+
+    <h2>font-style</h2>
+    <div class="example-block">
+        <p class="font-style-normal">Normal - звичайний стиль</p>
+        <p class="font-style-italic">Italic - курсив</p>
+        <p class="font-style-oblique">Oblique - похилий</p>
+    </div>
+
+    <h2>font-weight</h2>
+    <div class="example-block">
+        <p class="font-weight-light">Light (300) - легкий</p>
+        <p class="font-weight-normal">Normal (400) - звичайний</p>
+        <p class="font-weight-bold">Bold (700) - жирний</p>
+        <p class="font-weight-black">Black (900) - найжирніший</p>
+    </div>
+
+    <h2>font-size</h2>
+    <div class="example-block">
+        <p class="font-size-small">12px - малий розмір</p>
+        <p class="font-size-normal">16px - звичайний розмір</p>
+        <p class="font-size-large">24px - великий розмір</p>
+        <p class="font-size-xlarge">32px - дуже великий</p>
+        <p class="font-size-em">1.5em - відносний розмір</p>
+        <p class="font-size-rem">1.2rem - відносний до кореня</p>
+    </div>
+
+    <h2>font-variant</h2>
+    <div class="example-block">
+        <p class="font-variant-normal">Normal - звичайний варіант</p>
+        <p class="font-variant-small-caps">Small-caps - малі капітелі</p>
+    </div>
+
+    <h2>line-height</h2>
+    <div class="example-block">
+        <p class="line-height-small">Line-height: 1 - маленький міжрядковий інтервал. Текст розташований щільно один до одного.</p>
+        <p class="line-height-normal">Line-height: 1.5 - звичайний міжрядковий інтервал. Текст має комфортну відстань між рядками.</p>
+        <p class="line-height-large">Line-height: 2.5 - великий міжрядковий інтервал. Текст має значну відстань між рядками.</p>
+    </div>
+
+    <h2>letter-spacing та word-spacing</h2>
+    <div class="example-block">
+        <p class="letter-spacing-normal">Letter-spacing: normal</p>
+        <p class="letter-spacing-wide">Letter-spacing: 3px - широкий</p>
+        <p class="letter-spacing-tight">Letter-spacing: -1px - вузький</p>
+        <p class="word-spacing-normal">Word-spacing: normal - звичайна відстань між словами</p>
+        <p class="word-spacing-wide">Word-spacing: 10px - велика відстань між словами</p>
+    </div>
+
+    <h2>text-transform</h2>
+    <div class="example-block">
+        <p class="text-transform-uppercase">Uppercase - верхній регістр</p>
+        <p class="text-transform-lowercase">LOWERCASE - нижній регістр</p>
+        <p class="text-transform-capitalize">capitalize - кожне слово з великої</p>
+    </div>
+
+    <h2>text-decoration</h2>
+    <div class="example-block">
+        <p class="text-decoration-none">None - без декорації</p>
+        <p class="text-decoration-underline">Underline - підкреслення</p>
+        <p class="text-decoration-overline">Overline - лінія зверху</p>
+        <p class="text-decoration-line-through">Line-through - закреслення</p>
+        <p class="text-decoration-underline-overline">Underline + Overline - обидві лінії</p>
+        <p class="text-decoration-wavy">Wavy red - хвиляста червона</p>
+        <p class="text-decoration-dotted">Dotted blue - пунктирна синя</p>
+        <p class="text-decoration-dashed">Dashed green - штрихова зелена</p>
+        <p class="text-decoration-double">Double purple - подвійна фіолетова</p>
+        <p class="text-decoration-thick">Thick orange - товста оранжева</p>
+    </div>
+
+    <h2>text-shadow</h2>
+    <div class="example-block">
+        <p class="text-shadow-simple" style="font-size: 24px;">Проста тінь</p>
+        <p class="text-shadow-blur" style="font-size: 24px;">Розмита тінь</p>
+        <p class="text-shadow-color" style="font-size: 24px;">Кольорова тінь</p>
+        <p class="text-shadow-multiple" style="font-size: 24px;">Множинна тінь</p>
+        <p class="text-shadow-neon" style="font-size: 24px;">Неоновий ефект</p>
+        <p class="text-shadow-3d" style="font-size: 32px;">3D ефект</p>
+        <p class="text-shadow-outline" style="font-size: 24px; background: #888; padding: 5px;">Контур</p>
+    </div>
+
+    <h2>Скорочена властивість font</h2>
+    <div class="example-block">
+        <p class="font-shorthand">font: italic small-caps bold 18px/1.5 'Montserrat', sans-serif</p>
+    </div>
+
+    <h2>Колір тексту</h2>
+    <div class="example-block">
+        <p class="color-hex">HEX: #e74c3c</p>
+        <p class="color-rgb">RGB: rgb(46, 204, 113)</p>
+        <p class="color-rgba">RGBA: rgba(52, 152, 219, 0.7)</p>
+        <p class="color-hsl">HSL: hsl(280, 60%, 50%)</p>
+    </div>
+
+    <h2>Використання &lt;span&gt; для форматування частини абзацу</h2>
+    <div class="example-block">
+        <p>Це звичайний текст, але <span class="span-highlight">ця частина виділена жовтим</span> за допомогою span.</p>
+        <p>У цьому реченні <span class="span-color">важливе слово</span> виділено червоним кольором.</p>
+        <p>Тут частина тексту <span class="span-big">значно більша</span> за решту.</p>
+        <p>А це приклад <span class="span-styled">декоративного шрифту Lobster</span> всередині абзацу.</p>
+        <p>Можна комбінувати: <span class="span-highlight span-color">жовтий фон + червоний текст</span> разом.</p>
+        <p>Формула H<sub>2</sub>O та E=mc<sup>2</sup> з використанням <span class="span-styled">span</span> та тегів sub/sup.</p>
+    </div>
+</body>
+</html>

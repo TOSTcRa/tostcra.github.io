@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Списки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Списки в HTML та CSS</h1>
+
+    <h2>Маркировані списки (ul)</h2>
+
+    <h3>Стандартні маркери</h3>
+    <div class="example-block">
+        <p><strong>disc (за замовчуванням):</strong></p>
+        <ul class="list-disc">
+            <li>Перший елемент</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><strong>circle:</strong></p>
+        <ul class="list-circle">
+            <li>Перший елемент</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><strong>square:</strong></p>
+        <ul class="list-square">
+            <li>Перший елемент</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><strong>none (без маркера):</strong></p>
+        <ul class="list-none">
+            <li>Перший елемент</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+    </div>
+
+    <h3>Зображення як маркери (list-style-image)</h3>
+    <div class="example-block">
+        <p><strong>Зображення 1:</strong></p>
+        <ul class="list-image1">
+            <li>Елемент зі своїм маркером</li>
+            <li>Ще один елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><strong>Зображення 2:</strong></p>
+        <ul class="list-image2">
+            <li>Елемент зі своїм маркером</li>
+            <li>Ще один елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <p><strong>Зображення 3:</strong></p>
+        <ul class="list-image3">
+            <li>Елемент зі своїм маркером</li>
+            <li>Ще один елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+    </div>
+
+    <h3>Емодзі як маркери (::marker)</h3>
+    <div class="example-block">
+        <ul class="list-emoji">
+            <li>Елемент з емодзі</li>
+            <li>Другий елемент</li>
+            <li>Третій елемент</li>
+        </ul>
+
+        <ul class="list-emoji2">
+            <li>Виконане завдання</li>
+            <li>Ще одне завдання</li>
+            <li>І ще одне</li>
+        </ul>
+
+        <ul class="list-emoji3">
+            <li>Перший крок</li>
+            <li>Другий крок</li>
+            <li>Третій крок</li>
+        </ul>
+    </div>
+
+    <h2>Нумеровані списки (ol)</h2>
+
+    <h3>Різні типи нумерації</h3>
+    <div class="example-block">
+        <p><strong>decimal (1, 2, 3...):</strong></p>
+        <ol class="list-decimal">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>decimal-leading-zero (01, 02, 03...):</strong></p>
+        <ol class="list-decimal-leading-zero">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>lower-alpha (a, b, c...):</strong></p>
+        <ol class="list-lower-alpha">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>upper-alpha (A, B, C...):</strong></p>
+        <ol class="list-upper-alpha">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>lower-roman (i, ii, iii...):</strong></p>
+        <ol class="list-lower-roman">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>upper-roman (I, II, III...):</strong></p>
+        <ol class="list-upper-roman">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>lower-greek (α, β, γ...):</strong></p>
+        <ol class="list-lower-greek">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+
+        <p><strong>georgian:</strong></p>
+        <ol class="list-georgian">
+            <li>Перший</li>
+            <li>Другий</li>
+            <li>Третій</li>
+        </ol>
+    </div>
+
+    <h3>Атрибути ol</h3>
+    <div class="example-block">
+        <p><strong>start="5" (починається з 5):</strong></p>
+        <ol start="5">
+            <li>П'ятий елемент</li>
+            <li>Шостий елемент</li>
+            <li>Сьомий елемент</li>
+        </ol>
+
+        <p><strong>reversed (зворотній порядок):</strong></p>
+        <ol reversed>
+            <li>Перший (буде 3)</li>
+            <li>Другий (буде 2)</li>
+            <li>Третій (буде 1)</li>
+        </ol>
+
+        <p><strong>value на окремому елементі:</strong></p>
+        <ol>
+            <li>Перший</li>
+            <li value="10">Десятий</li>
+            <li>Одинадцятий</li>
+        </ol>
+    </div>
+
+    <h3>list-style-position</h3>
+    <div class="example-block">
+        <p><strong>outside (за замовчуванням):</strong></p>
+        <ol class="list-position-outside">
+            <li>Маркер знаходиться зовні блоку тексту. Це стандартна поведінка.</li>
+            <li>Другий елемент</li>
+        </ol>
+
+        <p><strong>inside:</strong></p>
+        <ol class="list-position-inside">
+            <li>Маркер знаходиться всередині блоку тексту. Текст обтікає маркер.</li>
+            <li>Другий елемент</li>
+        </ol>
+    </div>
+
+    <h3>Кастомні лічильники (counter)</h3>
+    <div class="example-block">
+        <ul class="custom-counter">
+            <li>Крок перший</li>
+            <li>Крок другий</li>
+            <li>Крок третій</li>
+            <li>Крок четвертий</li>
+        </ul>
+    </div>
+
+    <h2>Багаторівневі списки</h2>
+
+    <h3>Вкладений маркирований список</h3>
+    <div class="example-block">
+        <ul class="multi-level">
+            <li>Фрукти
+                <ul>
+                    <li>Яблука
+                        <ul>
+                            <li>Червоні</li>
+                            <li>Зелені</li>
+                            <li>Жовті</li>
+                        </ul>
+                    </li>
+                    <li>Банани</li>
+                    <li>Апельсини</li>
+                </ul>
+            </li>
+            <li>Овочі
+                <ul>
+                    <li>Помідори</li>
+                    <li>Огірки</li>
+                    <li>Морква</li>
+                </ul>
+            </li>
+            <li>Ягоди
+                <ul>
+                    <li>Полуниця</li>
+                    <li>Малина</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h3>Вкладений нумерований список</h3>
+    <div class="example-block">
+        <ol class="multi-level">
+            <li>Вступ
+                <ol class="list-lower-alpha">
+                    <li>Передмова</li>
+                    <li>Подяки</li>
+                </ol>
+            </li>
+            <li>Основна частина
+                <ol class="list-lower-alpha">
+                    <li>Розділ перший
+                        <ol class="list-lower-roman">
+                            <li>Підрозділ 1.1</li>
+                            <li>Підрозділ 1.2</li>
+                        </ol>
+                    </li>
+                    <li>Розділ другий</li>
+                    <li>Розділ третій</li>
+                </ol>
+            </li>
+            <li>Висновки</li>
+        </ol>
+    </div>
+
+    <h3>Змішаний багаторівневий список</h3>
+    <div class="example-block">
+        <ol class="multi-level">
+            <li>Перший пункт
+                <ul>
+                    <li>Підпункт A</li>
+                    <li>Підпункт B</li>
+                </ul>
+            </li>
+            <li>Другий пункт
+                <ul>
+                    <li>Підпункт C
+                        <ol class="list-lower-roman">
+                            <li>Деталь i</li>
+                            <li>Деталь ii</li>
+                        </ol>
+                    </li>
+                    <li>Підпункт D</li>
+                </ul>
+            </li>
+            <li>Третій пункт</li>
+        </ol>
+    </div>
+
+    <h3>Стилізований багаторівневий список</h3>
+    <div class="example-block">
+        <ul class="styled-multi">
+            <li>Рівень 1 (синій, disc)
+                <ul>
+                    <li>Рівень 2 (червоний, circle)
+                        <ul>
+                            <li>Рівень 3 (зелений, square)</li>
+                            <li>Ще один елемент</li>
+                        </ul>
+                    </li>
+                    <li>Інший елемент рівня 2</li>
+                </ul>
+            </li>
+            <li>Ще один елемент рівня 1</li>
+        </ul>
+    </div>
+
+    <h2>Списки визначень (dl)</h2>
+
+    <h3>Простий список визначень</h3>
+    <div class="example-block">
+        <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language - мова розмітки гіпертексту</dd>
+
+            <dt>CSS</dt>
+            <dd>Cascading Style Sheets - каскадні таблиці стилів</dd>
+
+            <dt>JavaScript</dt>
+            <dd>Мова програмування для створення інтерактивних веб-сторінок</dd>
+        </dl>
+    </div>
+
+    <h3>Список з кількома визначеннями</h3>
+    <div class="example-block">
+        <dl>
+            <dt>Браузер</dt>
+            <dd>Програма для перегляду веб-сторінок</dd>
+            <dd>Приклади: Chrome, Firefox, Safari, Edge</dd>
+
+            <dt>Сервер</dt>
+            <dd>Комп'ютер, що надає послуги іншим комп'ютерам</dd>
+            <dd>Може бути веб-сервером, поштовим сервером тощо</dd>
+        </dl>
+    </div>
+
+    <h3>Стилізований список визначень</h3>
+    <div class="example-block">
+        <dl class="dl-styled">
+            <dt>Frontend</dt>
+            <dd>Клієнтська частина веб-додатку, яку бачить користувач</dd>
+
+            <dt>Backend</dt>
+            <dd>Серверна частина веб-додатку, що обробляє дані</dd>
+
+            <dt>Full Stack</dt>
+            <dd>Розробник, який працює і з frontend, і з backend</dd>
+        </dl>
+    </div>
+
+    <h3>Горизонтальний список визначень</h3>
+    <div class="example-block">
+        <dl class="dl-inline">
+            <dt>Ім'я:</dt>
+            <dd>Іван Петренко</dd>
+
+            <dt>Email:</dt>
+            <dd>ivan@example.com</dd>
+
+            <dt>Телефон:</dt>
+            <dd>+380 12 345 6789</dd>
+
+            <dt>Місто:</dt>
+            <dd>Київ</dd>
+        </dl>
+    </div>
+</body>
+</html>

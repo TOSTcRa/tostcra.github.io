@@ -1,0 +1,280 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    margin-top: 40px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.example-block {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-lobster {
+    font-family: 'Lobster', cursive;
+}
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.font-style-normal {
+    font-style: normal;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.font-style-oblique {
+    font-style: oblique;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.font-weight-normal {
+    font-weight: 400;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.font-weight-black {
+    font-weight: 900;
+}
+
+.font-size-small {
+    font-size: 12px;
+}
+
+.font-size-normal {
+    font-size: 16px;
+}
+
+.font-size-large {
+    font-size: 24px;
+}
+
+.font-size-xlarge {
+    font-size: 32px;
+}
+
+.font-size-em {
+    font-size: 1.5em;
+}
+
+.font-size-rem {
+    font-size: 1.2rem;
+}
+
+.font-variant-normal {
+    font-variant: normal;
+}
+
+.font-variant-small-caps {
+    font-variant: small-caps;
+}
+
+.line-height-small {
+    line-height: 1;
+}
+
+.line-height-normal {
+    line-height: 1.5;
+}
+
+.line-height-large {
+    line-height: 2.5;
+}
+
+.letter-spacing-normal {
+    letter-spacing: normal;
+}
+
+.letter-spacing-wide {
+    letter-spacing: 3px;
+}
+
+.letter-spacing-tight {
+    letter-spacing: -1px;
+}
+
+.word-spacing-normal {
+    word-spacing: normal;
+}
+
+.word-spacing-wide {
+    word-spacing: 10px;
+}
+
+.text-transform-uppercase {
+    text-transform: uppercase;
+}
+
+.text-transform-lowercase {
+    text-transform: lowercase;
+}
+
+.text-transform-capitalize {
+    text-transform: capitalize;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.text-decoration-underline {
+    text-decoration: underline;
+}
+
+.text-decoration-overline {
+    text-decoration: overline;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+.text-decoration-underline-overline {
+    text-decoration: underline overline;
+}
+
+.text-decoration-wavy {
+    text-decoration: underline wavy red;
+}
+
+.text-decoration-dotted {
+    text-decoration: underline dotted blue;
+}
+
+.text-decoration-dashed {
+    text-decoration: underline dashed green;
+}
+
+.text-decoration-double {
+    text-decoration: underline double purple;
+}
+
+.text-decoration-thick {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: orange;
+}
+
+.text-shadow-simple {
+    text-shadow: 2px 2px 4px gray;
+}
+
+.text-shadow-blur {
+    text-shadow: 0 0 10px black;
+}
+
+.text-shadow-color {
+    text-shadow: 3px 3px 5px #3498db;
+}
+
+.text-shadow-multiple {
+    text-shadow:
+        1px 1px 2px red,
+        -1px -1px 2px blue;
+}
+
+.text-shadow-neon {
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #ff00de,
+        0 0 30px #ff00de;
+    color: white;
+    background: #333;
+    padding: 10px;
+}
+
+.text-shadow-3d {
+    text-shadow:
+        1px 1px 0 #ccc,
+        2px 2px 0 #bbb,
+        3px 3px 0 #aaa,
+        4px 4px 0 #999;
+}
+
+.text-shadow-outline {
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    color: white;
+}
+
+.font-shorthand {
+    font: italic small-caps bold 18px/1.5 'Montserrat', sans-serif;
+}
+
+.span-highlight {
+    background-color: yellow;
+    padding: 2px 5px;
+}
+
+.span-color {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.span-big {
+    font-size: 1.5em;
+}
+
+.span-styled {
+    font-family: 'Lobster', cursive;
+    color: #9b59b6;
+    font-size: 1.2em;
+}
+
+.color-hex {
+    color: #e74c3c;
+}
+
+.color-rgb {
+    color: rgb(46, 204, 113);
+}
+
+.color-rgba {
+    color: rgba(52, 152, 219, 0.7);
+}
+
+.color-hsl {
+    color: hsl(280, 60%, 50%);
+}
