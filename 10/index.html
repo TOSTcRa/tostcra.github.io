@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація HTML/CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Анімація в HTML та CSS</h1>
+        <p>Тег marquee та CSS animation</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>Тег &lt;marquee&gt;</h2>
+            <p>Тег marquee є застарілим (deprecated), але досі підтримується браузерами для зворотної сумісності.</p>
+
+            <h3>Базовий marquee (зліва направо)</h3>
+            <marquee class="marquee-basic">Це базовий біжучий рядок, який рухається зліва направо</marquee>
+
+            <h3>direction="right" (справа наліво)</h3>
+            <marquee class="marquee-basic" direction="right">Рух справа наліво</marquee>
+
+            <h3>direction="up" (знизу вгору)</h3>
+            <marquee class="marquee-up" direction="up">
+                Рядок 1: Рух знизу вгору<br>
+                Рядок 2: Вертикальна прокрутка<br>
+                Рядок 3: Текст продовжує рухатись
+            </marquee>
+
+            <h3>direction="down" (згори вниз)</h3>
+            <marquee class="marquee-up" direction="down">
+                Рядок 1: Рух згори вниз<br>
+                Рядок 2: Вертикальна прокрутка<br>
+                Рядок 3: У зворотному напрямку
+            </marquee>
+
+            <h3>behavior="alternate" (туди-сюди)</h3>
+            <marquee class="marquee-bounce" behavior="alternate">Біжучий рядок відскакує від країв</marquee>
+
+            <h3>behavior="slide" (один раз)</h3>
+            <marquee class="marquee-basic" behavior="slide">Цей текст прокрутиться один раз і зупиниться</marquee>
+
+            <h3>scrollamount (швидкість)</h3>
+            <marquee class="marquee-slow" scrollamount="2">Повільний рух (scrollamount="2")</marquee>
+            <marquee class="marquee-fast" scrollamount="15">Швидкий рух (scrollamount="15")</marquee>
+
+            <h3>scrolldelay (затримка)</h3>
+            <marquee class="marquee-basic" scrolldelay="100">Затримка між кроками (scrolldelay="100")</marquee>
+
+            <h3>loop (кількість повторів)</h3>
+            <marquee class="marquee-bounce" behavior="alternate" loop="3">Цей рядок пройде тільки 3 рази (оновіть сторінку)</marquee>
+
+            <h3>Комбінований приклад</h3>
+            <marquee class="marquee-bounce" behavior="alternate" scrollamount="8" direction="right">
+                ★ Анімований текст з різними налаштуваннями ★
+            </marquee>
+        </section>
+
+        <section>
+            <h2>CSS Animation</h2>
+            <p>Сучасний спосіб створення анімацій за допомогою @keyframes та властивості animation.</p>
+
+            <h3>Базові анімації трансформації</h3>
+            <div class="demo-box">
+                <div class="anim-box anim-slide">Slide</div>
+                <div class="anim-box anim-bounce">Bounce</div>
+                <div class="anim-box anim-rotate">Rotate</div>
+                <div class="anim-box anim-scale">Scale</div>
+                <div class="anim-box anim-fade">Fade</div>
+            </div>
+
+            <h3>Додаткові ефекти</h3>
+            <div class="demo-box">
+                <div class="anim-box anim-color">Color</div>
+                <div class="anim-box anim-shake">Shake</div>
+                <div class="anim-box anim-flip">Flip</div>
+                <div class="anim-box anim-swing">Swing</div>
+                <div class="anim-box anim-heartbeat">Heart</div>
+            </div>
+
+            <h3>Ще більше ефектів</h3>
+            <div class="demo-box">
+                <div class="anim-box anim-float">Float</div>
+                <div class="anim-box anim-glow">Glow</div>
+                <div class="anim-box anim-morph">Morph</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Текстові анімації</h2>
+
+            <h3>Ефект друкування (Typing)</h3>
+            <div class="text-anim">
+                <div class="text-typing">Цей текст друкується автоматично...</div>
+            </div>
+
+            <h3>Хвиля (Wave)</h3>
+            <div class="text-anim text-wave">
+                <span>А</span><span>н</span><span>і</span><span>м</span><span>а</span><span>ц</span><span>і</span><span>я</span><span>!</span>
+            </div>
+
+            <h3>Неонове мерехтіння (Neon)</h3>
+            <div class="text-anim text-neon">
+                NEON EFFECT
+            </div>
+
+            <h3>Райдужний текст (Rainbow)</h3>
+            <div class="text-anim">
+                <span class="text-rainbow" style="font-size: 32px; font-weight: bold;">RAINBOW TEXT</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Лоадери (Loading spinners)</h2>
+
+            <div class="loader-container">
+                <div class="loader">
+                    <div class="loader-spinner"></div>
+                    <span>Spinner</span>
+                </div>
+
+                <div class="loader">
+                    <div class="loader-dots">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <span>Dots</span>
+                </div>
+
+                <div class="loader">
+                    <div class="loader-bars">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <span>Bars</span>
+                </div>
+
+                <div class="loader">
+                    <div class="loader-ring"></div>
+                    <span>Ring</span>
+                </div>
+
+                <div class="loader">
+                    <div class="loader-pulse"></div>
+                    <span>Pulse</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Комплексна анімація</h2>
+            <p>Кілька анімацій одночасно на одному елементі:</p>
+
+            <div class="complex-animation" id="complexBox"></div>
+
+            <div class="controls">
+                <button onclick="toggleAnimation()">Пауза / Продовжити</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Hover анімації (при наведенні)</h2>
+            <p>Наведіть курсор на елементи:</p>
+
+            <div class="demo-box">
+                <div class="hover-box">Наведи на мене!</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Властивості animation</h2>
+
+            <h3>animation-name</h3>
+            <p>Назва @keyframes анімації</p>
+
+            <h3>animation-duration</h3>
+            <p>Тривалість анімації (наприклад: 2s, 500ms)</p>
+
+            <h3>animation-timing-function</h3>
+            <p>Функція часу: ease, linear, ease-in, ease-out, ease-in-out, cubic-bezier()</p>
+
+            <h3>animation-delay</h3>
+            <p>Затримка перед початком анімації</p>
+
+            <h3>animation-iteration-count</h3>
+            <p>Кількість повторів: число або infinite</p>
+
+            <h3>animation-direction</h3>
+            <p>Напрямок: normal, reverse, alternate, alternate-reverse</p>
+
+            <h3>animation-fill-mode</h3>
+            <p>Стан до/після: none, forwards, backwards, both</p>
+
+            <h3>animation-play-state</h3>
+            <p>Стан відтворення: running, paused</p>
+
+            <h3>Скорочений запис:</h3>
+            <code style="display: block; background: #0f3460; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                animation: name duration timing-function delay iteration-count direction fill-mode;
+            </code>
+        </section>
+
+        <section>
+            <h2>@keyframes приклади</h2>
+
+            <h3>Проста анімація (from/to):</h3>
+            <pre style="background: #0f3460; padding: 15px; border-radius: 8px; overflow-x: auto;">
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}</pre>
+
+            <h3>Анімація з відсотками:</h3>
+            <pre style="background: #0f3460; padding: 15px; border-radius: 8px; overflow-x: auto;">
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-10px);
+    }
+}</pre>
+
+            <h3>Анімація кількох властивостей:</h3>
+            <pre style="background: #0f3460; padding: 15px; border-radius: 8px; overflow-x: auto;">
+@keyframes complexEffect {
+    0% {
+        transform: scale(1) rotate(0deg);
+        background-color: #e94560;
+        border-radius: 10px;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        background-color: #00fff5;
+        border-radius: 50%;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        background-color: #e94560;
+        border-radius: 10px;
+    }
+}</pre>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Анімація HTML/CSS</p>
+        <p><a href="../9/">Попередня робота</a> | <a href="https://tostcra.github.io/" target="_blank">GitHub Pages</a></p>
+    </footer>
+
+    <script>
+        function toggleAnimation() {
+            let box = document.getElementById('complexBox');
+            if (box.style.animationPlayState === 'paused') {
+                box.style.animationPlayState = 'running';
+            } else {
+                box.style.animationPlayState = 'paused';
+            }
+        }
+    </script>
+</body>
+</html>
