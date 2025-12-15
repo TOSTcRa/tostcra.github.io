@@ -158,9 +158,10 @@ article header {
     padding-bottom: 20px;
 }
 
-article header h1 {
+article header h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    border: none;
 }
 
 article header p {
