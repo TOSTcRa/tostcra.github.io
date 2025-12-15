@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мультимедіа в HTML5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <h1>Мультимедіа в HTML5</h1>
+        <p>Відео, аудіо, карти, canvas та SVG</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#video-iframe">Video iframe</a></li>
+            <li><a href="#video-tag">Video тег</a></li>
+            <li><a href="#audio">Audio</a></li>
+            <li><a href="#maps">Карти</a></li>
+            <li><a href="#image-map">Image Map</a></li>
+            <li><a href="#canvas">Canvas</a></li>
+            <li><a href="#svg">SVG</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="background-info">
+            <h2>Фонове відео</h2>
+            <p>На цій сторінці використовується фонове відео. Воно розташоване за контентом і автоматично відтворюється без звуку.</p>
+            <div class="code-block">
+                &lt;div class="video-background"&gt;<br>
+                &nbsp;&nbsp;&lt;video autoplay muted loop playsinline&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                &nbsp;&nbsp;&lt;/video&gt;<br>
+                &lt;/div&gt;
+            </div>
+            <div class="info-text">
+                <strong>Атрибути:</strong> autoplay (автовідтворення), muted (без звуку), loop (повтор), playsinline (для мобільних)
+            </div>
+        </section>
+
+        <section id="video-iframe">
+            <h2>Відео через &lt;iframe&gt;</h2>
+            <p>Вставка відео з YouTube та інших платформ за допомогою iframe:</p>
+
+            <h3>YouTube відео</h3>
+            <div class="media-container">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <h3>Vimeo відео</h3>
+            <div class="media-container">
+                <div class="video-wrapper">
+                    <iframe src="https://player.vimeo.com/video/76979871" title="Vimeo video" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="code-block">
+                &lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen&gt;&lt;/iframe&gt;
+            </div>
+        </section>
+
+        <section id="video-tag">
+            <h2>Відео через тег &lt;video&gt;</h2>
+            <p>Вбудований HTML5 відеоплеєр з елементами керування:</p>
+
+            <h3>Базовий приклад</h3>
+            <div class="media-container">
+                <video controls poster="https://picsum.photos/800/450">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    <source src="https://www.w3schools.com/html/mov_bbb.webm" type="video/webm">
+                    Ваш браузер не підтримує відео.
+                </video>
+            </div>
+
+            <h3>Відео з автовідтворенням (muted)</h3>
+            <div class="media-container">
+                <video controls autoplay muted loop style="max-height: 300px;">
+                    <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="code-block">
+                &lt;video controls poster="preview.jpg"&gt;<br>
+                &nbsp;&nbsp;&lt;source src="video.mp4" type="video/mp4"&gt;<br>
+                &nbsp;&nbsp;&lt;source src="video.webm" type="video/webm"&gt;<br>
+                &lt;/video&gt;
+            </div>
+
+            <div class="info-text">
+                <strong>Атрибути video:</strong> controls, autoplay, muted, loop, poster, preload, width, height
+            </div>
+        </section>
+
+        <section id="audio">
+            <h2>Аудіо через тег &lt;audio&gt;</h2>
+            <p>HTML5 аудіоплеєр:</p>
+
+            <h3>Базовий аудіоплеєр</h3>
+            <div class="media-container">
+                <audio controls>
+                    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+                    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                    Ваш браузер не підтримує аудіо.
+                </audio>
+            </div>
+
+            <h3>Аудіо з автовідтворенням</h3>
+            <div class="media-container">
+                <audio controls preload="auto">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="code-block">
+                &lt;audio controls&gt;<br>
+                &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+                &nbsp;&nbsp;&lt;source src="audio.ogg" type="audio/ogg"&gt;<br>
+                &lt;/audio&gt;
+            </div>
+
+            <div class="info-text">
+                <strong>Атрибути audio:</strong> controls, autoplay, muted, loop, preload (none, metadata, auto)
+            </div>
+        </section>
+
+        <section id="maps">
+            <h2>Карти через &lt;iframe&gt;</h2>
+            <p>Вставка Google Maps та OpenStreetMap:</p>
+
+            <h3>Google Maps</h3>
+            <div class="media-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d162757.72839715858!2d30.392562399999997!3d50.4016991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4ee15a4505%3A0x764931d2170146fe!2z0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1702639200000!5m2!1suk!2sua"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <h3>OpenStreetMap</h3>
+            <div class="media-container">
+                <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=30.3%2C50.3%2C30.7%2C50.6&layer=mapnik&marker=50.45%2C30.52"
+                    width="100%"
+                    height="350"
+                    style="border:0;">
+                </iframe>
+            </div>
+
+            <div class="code-block">
+                &lt;iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="350"&gt;&lt;/iframe&gt;
+            </div>
+        </section>
+
+        <section id="image-map">
+            <h2>Карта зображення &lt;map&gt; та &lt;area&gt;</h2>
+            <p>Клікабельні області на зображенні:</p>
+
+            <div class="map-container">
+                <img src="media/map-image.jpg" alt="Клікабельне зображення" usemap="#imagemap" width="600" height="400">
+                <map name="imagemap">
+                    <area shape="rect" coords="0,0,200,200" href="#video-iframe" alt="Відео" title="Перейти до відео">
+                    <area shape="rect" coords="200,0,400,200" href="#audio" alt="Аудіо" title="Перейти до аудіо">
+                    <area shape="rect" coords="400,0,600,200" href="#maps" alt="Карти" title="Перейти до карт">
+                    <area shape="circle" coords="300,300,80" href="#canvas" alt="Canvas" title="Перейти до Canvas">
+                    <area shape="poly" coords="50,250,150,350,50,400" href="#svg" alt="SVG" title="Перейти до SVG">
+                </map>
+            </div>
+
+            <div class="info-text">
+                <strong>Області:</strong><br>
+                • Верхня ліва частина (rect) → Відео<br>
+                • Верхня центральна (rect) → Аудіо<br>
+                • Верхня права (rect) → Карти<br>
+                • Центральне коло (circle) → Canvas<br>
+                • Лівий нижній трикутник (poly) → SVG
+            </div>
+
+            <div class="code-block">
+                &lt;img src="image.jpg" usemap="#mymap"&gt;<br>
+                &lt;map name="mymap"&gt;<br>
+                &nbsp;&nbsp;&lt;area shape="rect" coords="x1,y1,x2,y2" href="link"&gt;<br>
+                &nbsp;&nbsp;&lt;area shape="circle" coords="x,y,radius" href="link"&gt;<br>
+                &nbsp;&nbsp;&lt;area shape="poly" coords="x1,y1,x2,y2,x3,y3" href="link"&gt;<br>
+                &lt;/map&gt;
+            </div>
+        </section>
+
+        <section id="canvas">
+            <h2>Canvas з JavaScript</h2>
+            <p>Малювання графіки за допомогою JavaScript:</p>
+
+            <h3>Базові фігури</h3>
+            <canvas id="canvas1" width="400" height="300"></canvas>
+
+            <h3>Анімація</h3>
+            <canvas id="canvas2" width="400" height="200"></canvas>
+            <div class="controls">
+                <button onclick="startAnimation()">Старт</button>
+                <button onclick="stopAnimation()">Стоп</button>
+            </div>
+
+            <h3>Інтерактивний Canvas</h3>
+            <canvas id="canvas3" width="400" height="200"></canvas>
+            <div class="controls">
+                <button onclick="clearCanvas3()">Очистити</button>
+            </div>
+            <p style="font-size: 14px;">Клікніть на canvas для малювання</p>
+
+            <div class="code-block">
+                const canvas = document.getElementById('myCanvas');<br>
+                const ctx = canvas.getContext('2d');<br>
+                ctx.fillStyle = 'red';<br>
+                ctx.fillRect(10, 10, 100, 80);
+            </div>
+        </section>
+
+        <section id="svg">
+            <h2>SVG (Scalable Vector Graphics)</h2>
+            <p>Векторна графіка безпосередньо в HTML:</p>
+
+            <h3>Базові фігури SVG</h3>
+            <div class="svg-container">
+                <svg width="500" height="200" style="background: #0f3460; border-radius: 10px;">
+                    <rect x="20" y="20" width="100" height="80" fill="#e94560" rx="10"/>
+                    <circle cx="200" cy="60" r="50" fill="#00fff5"/>
+                    <ellipse cx="320" cy="60" rx="60" ry="40" fill="#f39c12"/>
+                    <polygon points="420,20 470,100 370,100" fill="#27ae60"/>
+                    <line x1="20" y1="150" x2="480" y2="150" stroke="#fff" stroke-width="2"/>
+                    <text x="250" y="180" fill="white" text-anchor="middle" font-size="16">SVG Text</text>
+                </svg>
+            </div>
+
+            <h3>SVG з градієнтом та анімацією</h3>
+            <div class="svg-container">
+                <svg width="400" height="200" style="background: #0f3460; border-radius: 10px;">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#e94560"/>
+                            <stop offset="100%" style="stop-color:#00fff5"/>
+                        </linearGradient>
+                        <radialGradient id="grad2">
+                            <stop offset="0%" style="stop-color:#fff"/>
+                            <stop offset="100%" style="stop-color:#e94560"/>
+                        </radialGradient>
+                    </defs>
+                    <rect x="20" y="20" width="150" height="100" fill="url(#grad1)" rx="15">
+                        <animate attributeName="rx" values="15;30;15" dur="2s" repeatCount="indefinite"/>
+                    </rect>
+                    <circle cx="300" cy="100" r="50" fill="url(#grad2)">
+                        <animate attributeName="r" values="50;70;50" dur="1.5s" repeatCount="indefinite"/>
+                    </circle>
+                </svg>
+            </div>
+
+            <h3>SVG шлях (path)</h3>
+            <div class="svg-container">
+                <svg width="400" height="150" style="background: #0f3460; border-radius: 10px;">
+                    <path d="M 50 75 Q 100 25 150 75 T 250 75 T 350 75" stroke="#e94560" stroke-width="4" fill="none">
+                        <animate attributeName="stroke-dasharray" values="0,1000;500,0" dur="3s" repeatCount="indefinite"/>
+                    </path>
+                    <path d="M 50 120 L 100 100 L 150 120 L 200 90 L 250 110 L 300 80 L 350 100" stroke="#00fff5" stroke-width="3" fill="none"/>
+                </svg>
+            </div>
+
+            <div class="code-block">
+                &lt;svg width="200" height="100"&gt;<br>
+                &nbsp;&nbsp;&lt;rect x="10" y="10" width="80" height="60" fill="red"/&gt;<br>
+                &nbsp;&nbsp;&lt;circle cx="150" cy="50" r="40" fill="blue"/&gt;<br>
+                &lt;/svg&gt;
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Мультимедіа в HTML5</p>
+        <p><a href="../12/">Попередня робота</a> | <a href="https://tostcra.github.io/" target="_blank">GitHub Pages</a></p>
+    </footer>
+
+    <script>
+        // Canvas 1 - Базові фігури
+        const canvas1 = document.getElementById('canvas1');
+        const ctx1 = canvas1.getContext('2d');
+
+        // Прямокутник
+        ctx1.fillStyle = '#e94560';
+        ctx1.fillRect(20, 20, 100, 80);
+
+        // Прямокутник з обводкою
+        ctx1.strokeStyle = '#00fff5';
+        ctx1.lineWidth = 3;
+        ctx1.strokeRect(140, 20, 100, 80);
+
+        // Коло
+        ctx1.beginPath();
+        ctx1.arc(310, 60, 40, 0, Math.PI * 2);
+        ctx1.fillStyle = '#f39c12';
+        ctx1.fill();
+
+        // Трикутник
+        ctx1.beginPath();
+        ctx1.moveTo(50, 130);
+        ctx1.lineTo(100, 220);
+        ctx1.lineTo(0, 220);
+        ctx1.closePath();
+        ctx1.fillStyle = '#27ae60';
+        ctx1.fill();
+
+        // Лінія
+        ctx1.beginPath();
+        ctx1.moveTo(140, 150);
+        ctx1.lineTo(280, 200);
+        ctx1.strokeStyle = '#9b59b6';
+        ctx1.lineWidth = 4;
+        ctx1.stroke();
+
+        // Текст
+        ctx1.font = '20px Arial';
+        ctx1.fillStyle = '#fff';
+        ctx1.fillText('Canvas Text', 260, 270);
+
+        // Градієнт
+        const gradient = ctx1.createLinearGradient(300, 130, 380, 210);
+        gradient.addColorStop(0, '#e94560');
+        gradient.addColorStop(1, '#00fff5');
+        ctx1.fillStyle = gradient;
+        ctx1.fillRect(300, 130, 80, 80);
+
+        // Canvas 2 - Анімація
+        const canvas2 = document.getElementById('canvas2');
+        const ctx2 = canvas2.getContext('2d');
+        let x = 50;
+        let dx = 3;
+        let animationId;
+
+        function animate() {
+            ctx2.clearRect(0, 0, canvas2.width, canvas2.height);
+
+            ctx2.beginPath();
+            ctx2.arc(x, 100, 30, 0, Math.PI * 2);
+            ctx2.fillStyle = '#e94560';
+            ctx2.fill();
+
+            x += dx;
+            if (x > canvas2.width - 30 || x < 30) {
+                dx = -dx;
+            }
+
+            animationId = requestAnimationFrame(animate);
+        }
+
+        function startAnimation() {
+            if (!animationId) {
+                animate();
+            }
+        }
+
+        function stopAnimation() {
+            cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+
+        // Canvas 3 - Інтерактивний
+        const canvas3 = document.getElementById('canvas3');
+        const ctx3 = canvas3.getContext('2d');
+        ctx3.fillStyle = '#0f3460';
+        ctx3.fillRect(0, 0, canvas3.width, canvas3.height);
+
+        canvas3.addEventListener('click', function(e) {
+            const rect = canvas3.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            ctx3.beginPath();
+            ctx3.arc(x, y, 20, 0, Math.PI * 2);
+            ctx3.fillStyle = '#' + Math.floor(Math.random()*16777215).toString(16);
+            ctx3.fill();
+        });
+
+        function clearCanvas3() {
+            ctx3.fillStyle = '#0f3460';
+            ctx3.fillRect(0, 0, canvas3.width, canvas3.height);
+        }
+    </script>
+</body>
+</html>
