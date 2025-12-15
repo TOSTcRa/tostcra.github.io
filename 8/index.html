@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посилання та кнопки CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+    <header>
+        <h1>Посилання та кнопки за допомогою CSS</h1>
+        <p>Демонстрація різних стилів кнопок та посилань</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#custom-buttons">Власні кнопки</a></li>
+            <li><a href="#generator-buttons">Кнопки з генераторів</a></li>
+            <li><a href="#js-button">JavaScript кнопка</a></li>
+            <li><a href="#internal-links">Внутрішні посилання</a></li>
+            <li><a href="#works">Мої роботи</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <section id="intro">
+            <h2>Вступ</h2>
+            <p>На цій сторінці представлені різноманітні стилі кнопок, створених за допомогою CSS. Кнопки є важливим елементом веб-інтерфейсу, вони привертають увагу користувача та спонукають до дії.</p>
+            <p>Сучасні CSS-техніки дозволяють створювати кнопки з різноманітними ефектами: градієнти, тіні, анімації, переходи та багато іншого. Нижче представлені приклади кнопок, створених власноруч та за допомогою онлайн-генераторів.</p>
+            <p>Кожна кнопка може бути посиланням на інший документ або виконувати JavaScript-функцію при натисканні.</p>
+        </section>
+
+        <section id="custom-buttons">
+            <h2>Власні кнопки (створені самостійно)</h2>
+
+            <h3>Градієнтна кнопка з тінню</h3>
+            <p>Кнопка з градієнтним фоном, м'якою тінню та ефектом підняття при наведенні.</p>
+            <div class="btn-container">
+                <a href="#works" class="btn-custom">Перейти до робіт</a>
+            </div>
+
+            <h3>Кнопка з контуром (outline)</h3>
+            <p>Прозора кнопка з кольоровою рамкою, яка заповнюється кольором при наведенні.</p>
+            <div class="btn-container">
+                <a href="#internal-links" class="btn-outline">Внутрішні посилання</a>
+            </div>
+
+            <h3>3D кнопка</h3>
+            <p>Кнопка з ефектом об'єму, яка "натискається" при кліку.</p>
+            <div class="btn-container">
+                <a href="../6/" class="btn-3d">Таблиці CSS</a>
+            </div>
+
+            <h3>Кнопка зі слайд-ефектом</h3>
+            <p>При наведенні фон плавно з'являється зліва направо.</p>
+            <div class="btn-container">
+                <a href="../7/" class="btn-slide">Заголовки та текст</a>
+            </div>
+
+            <h3>Закруглена кнопка</h3>
+            <p>Кнопка з повністю закругленими краями та ефектом збільшення.</p>
+            <div class="btn-container">
+                <a href="#top" class="btn-rounded">На початок</a>
+            </div>
+        </section>
+
+        <section id="generator-buttons">
+            <h2>Кнопки з генераторів та готові стилі</h2>
+            <p>Ці кнопки створені на основі популярних CSS-генераторів та бібліотек стилів.</p>
+
+            <h3>Неонова кнопка (CSS Glow Generator)</h3>
+            <p>Кнопка з анімованим світінням, створена за допомогою animation та box-shadow.</p>
+            <div class="btn-container">
+                <a href="../2/" class="btn-glow">Градієнти</a>
+            </div>
+
+            <h3>Кнопка з градієнтною рамкою (Gradient Border)</h3>
+            <p>Анімована райдужна рамка навколо кнопки, створена за допомогою псевдоелемента ::before.</p>
+            <div class="btn-container">
+                <a href="../3/" class="btn-gradient-border">Зображення</a>
+            </div>
+
+            <h3>Кнопка з ефектом хвилі (Ripple Effect)</h3>
+            <p>При наведенні з'являється круговий ефект, що розходиться від центру.</p>
+            <div class="btn-container">
+                <a href="../4/" class="btn-ripple">Форматування</a>
+            </div>
+
+            <h3>Кнопка з іконкою</h3>
+            <p>Кнопка з текстом та символом-іконкою.</p>
+            <div class="btn-container">
+                <a href="../5/" class="btn-icon">&#9733; Списки</a>
+            </div>
+
+            <h3>Скляна кнопка (Glassmorphism)</h3>
+            <p>Кнопка в стилі glassmorphism з ефектом розмиття фону.</p>
+            <div class="btn-container">
+                <a href="#works" class="btn-glass">Всі роботи</a>
+            </div>
+        </section>
+
+        <section id="js-button">
+            <h2>Кнопка з JavaScript</h2>
+            <p>Ця кнопка виконує JavaScript-функцію при натисканні. Натисніть, щоб побачити сповіщення.</p>
+
+            <div class="btn-container">
+                <button class="btn-js" onclick="showAlert()">Натисни мене!</button>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn-custom" onclick="changeColor()">Змінити колір фону</button>
+            </div>
+
+            <div class="btn-container">
+                <button class="btn-3d" onclick="showTime()">Показати час</button>
+            </div>
+        </section>
+
+        <section id="internal-links">
+            <h2>Внутрішні посилання</h2>
+            <p>Посилання на різні розділи цього документу:</p>
+
+            <ul class="link-list">
+                <li><a href="#top">&#8593; На початок сторінки</a> — перехід до header</li>
+                <li><a href="#intro">&#9654; Вступ</a> — перехід до вступного розділу</li>
+                <li><a href="#custom-buttons">&#9654; Власні кнопки</a> — кнопки, створені самостійно</li>
+                <li><a href="#generator-buttons">&#9654; Кнопки з генераторів</a> — готові стилі кнопок</li>
+                <li><a href="#js-button">&#9654; JavaScript кнопка</a> — інтерактивні кнопки</li>
+                <li><a href="#works">&#9654; Мої роботи</a> — посилання на попередні завдання</li>
+            </ul>
+
+            <h3>Посилання на інші документи проекту</h3>
+            <ul class="link-list">
+                <li><a href="../7/about.html">Сторінка "Про автора"</a> — додаткова сторінка із завдання 7</li>
+                <li><a href="../7/index.html#history">Історія України</a> — розділ на іншій сторінці</li>
+                <li><a href="../7/index.html#culture">Культура України</a> — розділ на іншій сторінці</li>
+            </ul>
+        </section>
+
+        <section id="works">
+            <h2>Мої роботи</h2>
+            <p>Посилання на всі попередні завдання, розміщені на GitHub Pages:</p>
+
+            <div class="works-grid">
+                <div class="work-card">
+                    <h4>Завдання 2</h4>
+                    <p>Градієнти CSS</p>
+                    <a href="../2/">Переглянути</a>
+                </div>
+
+                <div class="work-card">
+                    <h4>Завдання 3</h4>
+                    <p>Робота з зображеннями</p>
+                    <a href="../3/">Переглянути</a>
+                </div>
+
+                <div class="work-card">
+                    <h4>Завдання 4</h4>
+                    <p>Форматування символів</p>
+                    <a href="../4/">Переглянути</a>
+                </div>
+
+                <div class="work-card">
+                    <h4>Завдання 5</h4>
+                    <p>Списки HTML/CSS</p>
+                    <a href="../5/">Переглянути</a>
+                </div>
+
+                <div class="work-card">
+                    <h4>Завдання 6</h4>
+                    <p>Таблиці CSS</p>
+                    <a href="../6/">Переглянути</a>
+                </div>
+
+                <div class="work-card">
+                    <h4>Завдання 7</h4>
+                    <p>Заголовки та текст</p>
+                    <a href="../7/">Переглянути</a>
+                </div>
+            </div>
+
+            <h3>Прямі посилання (абсолютні URL)</h3>
+            <p>Посилання на роботи з повними адресами GitHub Pages:</p>
+            <ul class="link-list">
+                <li><a href="https://tostcra.github.io/2/" target="_blank">https://tostcra.github.io/2/</a> — Градієнти</li>
+                <li><a href="https://tostcra.github.io/3/" target="_blank">https://tostcra.github.io/3/</a> — Зображення</li>
+                <li><a href="https://tostcra.github.io/4/" target="_blank">https://tostcra.github.io/4/</a> — Форматування</li>
+                <li><a href="https://tostcra.github.io/5/" target="_blank">https://tostcra.github.io/5/</a> — Списки</li>
+                <li><a href="https://tostcra.github.io/6/" target="_blank">https://tostcra.github.io/6/</a> — Таблиці</li>
+                <li><a href="https://tostcra.github.io/7/" target="_blank">https://tostcra.github.io/7/</a> — Заголовки</li>
+                <li><a href="https://tostcra.github.io/8/" target="_blank">https://tostcra.github.io/8/</a> — Ця сторінка</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Всі кнопки разом</h2>
+            <p>Порівняння всіх стилів кнопок:</p>
+            <div class="btn-container">
+                <a href="#top" class="btn-custom">Custom</a>
+                <a href="#top" class="btn-outline">Outline</a>
+                <a href="#top" class="btn-3d">3D</a>
+                <a href="#top" class="btn-glow">Glow</a>
+                <a href="#top" class="btn-gradient-border">Gradient</a>
+                <a href="#top" class="btn-ripple">Ripple</a>
+                <a href="#top" class="btn-slide">Slide</a>
+                <a href="#top" class="btn-icon">&#9733; Icon</a>
+                <a href="#top" class="btn-rounded">Rounded</a>
+                <a href="#top" class="btn-glass">Glass</a>
+            </div>
+        </section>
+
+    </div>
+
+    <a href="#top" class="back-to-top">&#8593;</a>
+
+    <footer>
+        <p>&copy; 2024 Посилання та кнопки CSS</p>
+        <p>
+            <a href="#top">На початок</a> |
+            <a href="../7/">Попередня робота</a> |
+            <a href="https://tostcra.github.io/" target="_blank">GitHub Pages</a>
+        </p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert('Вітаю! Ви натиснули кнопку JavaScript!');
+        }
+
+        function changeColor() {
+            var colors = ['#ffebee', '#e3f2fd', '#e8f5e9', '#fff3e0', '#f3e5f5', '#e0f7fa'];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+
+        function showTime() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var seconds = now.getSeconds().toString().padStart(2, '0');
+            alert('Поточний час: ' + hours + ':' + minutes + ':' + seconds);
+        }
+    </script>
+</body>
+</html>
