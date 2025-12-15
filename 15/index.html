@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Персональний сайт-портфоліо веб-розробника">
+    <meta name="author" content="Web Developer">
+    <meta name="keywords" content="веб-розробка, HTML, CSS, JavaScript, портфоліо">
+    <title>Портфоліо | Веб-розробник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+
+    <header>
+        <div class="container header-content">
+            <a href="#home" class="logo">Dev<span>Portfolio</span></a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home" class="active">Головна</a></li>
+                    <li><a href="#about">Про мене</a></li>
+                    <li><a href="#services">Навички</a></li>
+                    <li><a href="#projects">Проекти</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                    <li><a href="works.html">Роботи</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Привіт, я <span style="color: var(--accent);">Веб-розробник</span></h1>
+                    <p>Створюю сучасні, адаптивні та красиві веб-сайти з використанням <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> та <abbr title="JavaScript">JS</abbr>.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Мої проекти</a>
+                        <a href="#contact" class="btn btn-outline">Зв'язатися</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/hero.jpg" alt="Hero зображення">
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Про мене</h2>
+                    <p>Дізнайтесь більше про мій досвід та навички</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/avatar.jpg" alt="Фото профілю">
+                    </div>
+                    <div class="about-text">
+                        <h3>Веб-розробник з пристрастю до дизайну</h3>
+                        <p>Я — студент, який вивчає веб-технології та створює сучасні веб-сайти. Моя мета — поєднувати <mark>естетику</mark> та <mark>функціональність</mark> у кожному проекті.</p>
+                        <p>Маю досвід роботи з:</p>
+                        <ul style="margin: 15px 0 15px 30px;">
+                            <li>Семантична верстка <strong>HTML5</strong></li>
+                            <li>Стилізація за допомогою <strong>CSS3</strong></li>
+                            <li>Адаптивний дизайн (<em>Responsive Design</em>)</li>
+                            <li>Анімації та переходи</li>
+                            <li>Основи <strong>JavaScript</strong></li>
+                        </ul>
+                        <blockquote>
+                            <q>Хороший дизайн — це очевидний дизайн. Чудовий дизайн — прозорий.</q>
+                            <footer>— <cite>Джо Спарано</cite></footer>
+                        </blockquote>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Responsive</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" style="background: var(--white);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Мої навички</h2>
+                    <p>Технології та інструменти, якими я володію</p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>HTML5</h3>
+                        <p>Семантична верстка, доступність, <abbr title="Search Engine Optimization">SEO</abbr>-оптимізація та структурування контенту.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">✨</div>
+                        <h3>CSS3</h3>
+                        <p>Flexbox, Grid, анімації, градієнти, адаптивний дизайн та сучасні техніки стилізації.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>JavaScript</h3>
+                        <p>Інтерактивність, обробка подій, робота з <abbr title="Document Object Model">DOM</abbr>, валідація форм.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">📱</div>
+                        <h3>Responsive</h3>
+                        <p>Mobile-first підхід, медіа-запити, адаптація під різні пристрої та екрани.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Інструменти</h3>
+                        <p>VS Code, Git, GitHub, Chrome DevTools, Figma для прототипування.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Оптимізація</h3>
+                        <p>Продуктивність, валідація коду, кросбраузерність, найкращі практики.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Мої проекти</h2>
+                    <p>Приклади виконаних робіт з курсу HTML та CSS</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="images/project1.jpg" alt="Проект 1">
+                        </figure>
+                        <div class="project-info">
+                            <h3>Градієнти CSS</h3>
+                            <p>Приклади різноманітних градієнтних заливок: linear, radial, conic та repeating.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">CSS3</span>
+                                <span class="project-tag">Градієнти</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="images/project2.jpg" alt="Проект 2">
+                        </figure>
+                        <div class="project-info">
+                            <h3>Форми HTML</h3>
+                            <p>Всі типи полів форм, валідація, калькулятор та конвертери на JavaScript.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">Forms</span>
+                                <span class="project-tag">JS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <figure class="project-image">
+                            <img src="images/project3.jpg" alt="Проект 3">
+                        </figure>
+                        <div class="project-info">
+                            <h3>Мультимедіа</h3>
+                            <p>Відео, аудіо, карти, Canvas, SVG та фонове відео на сторінці.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">Canvas</span>
+                                <span class="project-tag">SVG</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="works.html" class="btn btn-primary" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">Всі роботи →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background: var(--white);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Контакти</h2>
+                    <p>Зв'яжіться зі мною для співпраці</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Контактна інформація</h3>
+                        <address>
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <a href="mailto:example@mail.com">example@mail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📱</div>
+                                <div>
+                                    <strong>Телефон</strong><br>
+                                    <a href="tel:+380123456789">+380 12 345 67 89</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <strong>Локація</strong><br>
+                                    Україна, Київ
+                                </div>
+                            </div>
+                        </address>
+
+                        <h3 style="margin-top: 30px;">Соціальні мережі</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="GitHub">GH</a>
+                            <a href="#" class="social-link" title="LinkedIn">in</a>
+                            <a href="#" class="social-link" title="Telegram">TG</a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="name">Ім'я <span style="color: var(--accent);">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Ваше ім'я">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span style="color: var(--accent);">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Тема</label>
+                            <select id="subject" name="subject">
+                                <option value="">Оберіть тему</option>
+                                <option value="collaboration">Співпраця</option>
+                                <option value="question">Запитання</option>
+                                <option value="feedback">Відгук</option>
+                                <option value="other">Інше</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Повідомлення <span style="color: var(--accent);">*</span></label>
+                            <textarea id="message" name="message" required placeholder="Ваше повідомлення..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required> Я погоджуюся з <a href="#">умовами</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Надіслати повідомлення</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DevPortfolio</h4>
+                    <p>Сучасні веб-рішення з використанням HTML5, CSS3 та JavaScript.</p>
+                    <p><small>&copy; <time datetime="2024">2024</time> Всі права захищено.</small></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Навігація</h4>
+                    <ul>
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#about">Про мене</a></li>
+                        <li><a href="#services">Навички</a></li>
+                        <li><a href="#projects">Проекти</a></li>
+                        <li><a href="#contact">Контакти</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Роботи з курсу</h4>
+                    <ul>
+                        <li><a href="works.html">Всі роботи</a></li>
+                        <li><a href="../2/">Градієнти</a></li>
+                        <li><a href="../9/">Форми</a></li>
+                        <li><a href="../13/">Мультимедіа</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p>📧 example@mail.com</p>
+                    <p>📱 +380 12 345 67 89</p>
+                    <p>📍 Україна, Київ</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Створено з ❤️ використовуючи HTML5 та CSS3</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop">↑</a>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function() {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                document.getElementById('nav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
