@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блоки в CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Використання блоків у CSS</h1>
+
+        <div class="section">
+            <h2>Базовий блок</h2>
+            <div class="box-basic">Текст у центрі</div>
+        </div>
+
+        <div class="section">
+            <h2>Типи рамок (border)</h2>
+
+            <div class="boxes-row">
+                <div class="box-border-solid">solid</div>
+                <div class="box-border-dashed">dashed</div>
+                <div class="box-border-dotted">dotted</div>
+                <div class="box-border-double">double</div>
+            </div>
+
+            <div class="boxes-row">
+                <div class="box-border-groove">groove</div>
+                <div class="box-border-ridge">ridge</div>
+                <div class="box-border-mixed">mixed borders</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Фони блоків</h2>
+
+            <div class="boxes-row">
+                <div class="box-bg-color">Колір</div>
+                <div class="box-bg-gradient-linear">Linear gradient</div>
+                <div class="box-bg-gradient-radial">Radial gradient</div>
+                <div class="box-bg-gradient-conic">Conic gradient</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Закруглення (border-radius)</h2>
+
+            <div class="boxes-row">
+                <div class="box-radius-small">10px</div>
+                <div class="box-radius-large">30px</div>
+                <div class="box-radius-circle">50% (коло)</div>
+                <div class="box-radius-different">Різні кути</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Тіні (box-shadow)</h2>
+
+            <div class="boxes-row">
+                <div class="box-shadow-simple">Проста тінь</div>
+                <div class="box-shadow-spread">Розмита тінь</div>
+                <div class="box-shadow-inset">Внутрішня тінь</div>
+                <div class="box-shadow-multiple">Множинні тіні</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Вкладені блоки (рівень 2)</h2>
+
+            <div class="outer-box-1">
+                <div class="inner-box-1">
+                    <p><strong>Внутрішній блок</strong></p>
+                    <p>Цей блок знаходиться всередині зовнішнього</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Вкладені блоки (рівень 3)</h2>
+
+            <div class="outer-box-2">
+                <div class="middle-box-2">
+                    <p><strong>Середній блок</strong></p>
+                    <div class="inner-box-2">
+                        <p>Внутрішній блок (3-й рівень)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Вкладені блоки в ряд</h2>
+
+            <div class="outer-box-3">
+                <p style="color: white; text-align: center; margin-bottom: 15px;">Зовнішній блок</p>
+                <div class="nested-row">
+                    <div class="nested-item">
+                        Блок 1
+                        <div class="nested-item-inner">Вкладений</div>
+                    </div>
+                    <div class="nested-item">
+                        Блок 2
+                        <div class="nested-item-inner">Вкладений</div>
+                    </div>
+                    <div class="nested-item">
+                        Блок 3
+                        <div class="nested-item-inner">Вкладений</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Концентричні блоки</h2>
+
+            <div class="outer-box-4">
+                <div class="middle-box-4">
+                    <div class="inner-box-4">
+                        Центр
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Способи центрування тексту в блоці</h2>
+
+            <h3>1. Flexbox (display: flex)</h3>
+            <div class="demo-center-box center-flex">
+                Flexbox центрування
+            </div>
+            <code>display: flex; align-items: center; justify-content: center;</code>
+
+            <h3>2. Grid (display: grid)</h3>
+            <div class="demo-center-box center-grid">
+                Grid центрування
+            </div>
+            <code>display: grid; place-items: center;</code>
+
+            <h3>3. Text-align + line-height</h3>
+            <div class="demo-center-box center-text">
+                Text-align
+            </div>
+            <code>text-align: center; line-height: 100px;</code>
+
+            <h3>4. Position + transform</h3>
+            <div class="demo-center-box center-position">
+                <span class="center-position-inner">Position</span>
+            </div>
+            <code>position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);</code>
+        </div>
+
+        <div class="section">
+            <h2>Box Model (Блокова модель)</h2>
+
+            <div class="box-model-demo">
+                <p style="margin: 0 0 10px; color: #666;">margin: 20px</p>
+                <p style="margin: 0 0 10px; color: #3498db;">border: 10px</p>
+                <p style="margin: 0 0 10px; color: #666;">padding: 30px</p>
+                <div class="box-model-content">
+                    content
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Картки (вкладені блоки)</h2>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="margin: 0;">Заголовок</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Це тіло картки з текстом. Картка складається з кількох вкладених блоків.</p>
+                    </div>
+                    <div class="card-footer">
+                        Футер картки
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="margin: 0;">Картка 2</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Ще одна картка з такою ж структурою вкладених блоків.</p>
+                    </div>
+                    <div class="card-footer">
+                        Футер
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 style="margin: 0;">Картка 3</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Третя картка демонструє повторне використання стилів.</p>
+                    </div>
+                    <div class="card-footer">
+                        Футер
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Макет сторінки (Layout)</h2>
+
+            <div class="layout-container">
+                <div class="layout-header">
+                    Header (Заголовок)
+                </div>
+                <div class="layout-main">
+                    <div class="layout-sidebar">
+                        Sidebar
+                    </div>
+                    <div class="layout-content">
+                        Content (Основний контент)
+                    </div>
+                </div>
+                <div class="layout-footer">
+                    Footer (Підвал)
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
