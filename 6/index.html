@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиці CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Форматування таблиць за допомогою CSS</h1>
+
+    <h2>border-collapse</h2>
+    <div class="example-block">
+        <h3>collapse (злиті рамки)</h3>
+        <table class="table-basic">
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+            <tr>
+                <td>Дані 1</td>
+                <td>Дані 2</td>
+                <td>Дані 3</td>
+            </tr>
+            <tr>
+                <td>Дані 4</td>
+                <td>Дані 5</td>
+                <td>Дані 6</td>
+            </tr>
+        </table>
+
+        <h3>separate (розділені рамки)</h3>
+        <table class="table-separate">
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+            <tr>
+                <td>Дані 1</td>
+                <td>Дані 2</td>
+                <td>Дані 3</td>
+            </tr>
+            <tr>
+                <td>Дані 4</td>
+                <td>Дані 5</td>
+                <td>Дані 6</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>border-spacing</h2>
+    <div class="example-block">
+        <h3>border-spacing: 5px 15px (горизонтальний вертикальний)</h3>
+        <table class="table-spacing-5">
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+            </tr>
+            <tr>
+                <td>Дані 1</td>
+                <td>Дані 2</td>
+                <td>Дані 3</td>
+            </tr>
+            <tr>
+                <td>Дані 4</td>
+                <td>Дані 5</td>
+                <td>Дані 6</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>width (ширина таблиці)</h2>
+    <div class="example-block">
+        <h3>width: 100%</h3>
+        <table class="table-width-100">
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td>Дані</td>
+                <td>Дані</td>
+            </tr>
+        </table>
+
+        <h3>width: 50%</h3>
+        <table class="table-width-50">
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td>Дані</td>
+                <td>Дані</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>table-layout</h2>
+    <div class="example-block">
+        <h3>table-layout: fixed</h3>
+        <table class="table-fixed">
+            <tr>
+                <th>Короткий</th>
+                <th>Дуже довгий текст заголовка</th>
+                <th>Середній текст</th>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td>Дуже довгий текст який обрізається</td>
+                <td>Звичайні дані</td>
+            </tr>
+        </table>
+
+        <h3>table-layout: auto</h3>
+        <table class="table-auto">
+            <tr>
+                <th>Короткий</th>
+                <th>Дуже довгий текст заголовка</th>
+                <th>Середній текст</th>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td>Дуже довгий текст який розтягує колонку</td>
+                <td>Звичайні дані</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Ширина колонок</h2>
+    <div class="example-block">
+        <table class="table-col-width">
+            <tr>
+                <th class="col-small">10%</th>
+                <th class="col-medium">30%</th>
+                <th class="col-large">60%</th>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>Назва товару</td>
+                <td>Опис товару з детальною інформацією</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ноутбук</td>
+                <td>Потужний ноутбук для роботи та розваг</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Типи рамок (border-style)</h2>
+    <div class="example-block">
+        <table class="table-borders border-solid">
+            <tr><td>solid</td><td>solid</td><td>solid</td></tr>
+        </table>
+        <table class="table-borders border-dashed">
+            <tr><td>dashed</td><td>dashed</td><td>dashed</td></tr>
+        </table>
+        <table class="table-borders border-dotted">
+            <tr><td>dotted</td><td>dotted</td><td>dotted</td></tr>
+        </table>
+        <table class="table-borders border-double">
+            <tr><td>double</td><td>double</td><td>double</td></tr>
+        </table>
+        <table class="table-borders border-groove">
+            <tr><td>groove</td><td>groove</td><td>groove</td></tr>
+        </table>
+        <table class="table-borders border-ridge">
+            <tr><td>ridge</td><td>ridge</td><td>ridge</td></tr>
+        </table>
+    </div>
+
+    <h2>Стилізований заголовок</h2>
+    <div class="example-block">
+        <table class="table-header-style">
+            <tr>
+                <th>Товар</th>
+                <th>Категорія</th>
+                <th>Ціна</th>
+                <th>Кількість</th>
+            </tr>
+            <tr>
+                <td>Телефон</td>
+                <td>Електроніка</td>
+                <td>15000 грн</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Навушники</td>
+                <td>Аксесуари</td>
+                <td>2500 грн</td>
+                <td>100</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Смугаста таблиця (nth-child)</h2>
+    <div class="example-block">
+        <table class="table-striped">
+            <tr>
+                <th>Ім'я</th>
+                <th>Посада</th>
+                <th>Відділ</th>
+            </tr>
+            <tr>
+                <td>Іван Петренко</td>
+                <td>Менеджер</td>
+                <td>Продажі</td>
+            </tr>
+            <tr>
+                <td>Марія Коваленко</td>
+                <td>Розробник</td>
+                <td>IT</td>
+            </tr>
+            <tr>
+                <td>Петро Сидоренко</td>
+                <td>Дизайнер</td>
+                <td>Маркетинг</td>
+            </tr>
+            <tr>
+                <td>Олена Шевченко</td>
+                <td>Аналітик</td>
+                <td>Фінанси</td>
+            </tr>
+            <tr>
+                <td>Андрій Бондаренко</td>
+                <td>Тестувальник</td>
+                <td>IT</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Hover ефект</h2>
+    <div class="example-block">
+        <table class="table-hover">
+            <tr>
+                <th>Продукт</th>
+                <th>Статус</th>
+                <th>Дата</th>
+            </tr>
+            <tr>
+                <td>Замовлення #001</td>
+                <td>Доставлено</td>
+                <td>01.12.2024</td>
+            </tr>
+            <tr>
+                <td>Замовлення #002</td>
+                <td>В обробці</td>
+                <td>05.12.2024</td>
+            </tr>
+            <tr>
+                <td>Замовлення #003</td>
+                <td>Відправлено</td>
+                <td>10.12.2024</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>text-align та vertical-align</h2>
+    <div class="example-block">
+        <table class="table-align">
+            <tr>
+                <th>Вирівнювання</th>
+                <th class="align-left">Left</th>
+                <th class="align-center">Center</th>
+                <th class="align-right">Right</th>
+            </tr>
+            <tr>
+                <td class="valign-top">top</td>
+                <td class="align-left valign-top">Текст<br>зверху<br>зліва</td>
+                <td class="align-center valign-top">Текст<br>зверху<br>по центру</td>
+                <td class="align-right valign-top">Текст<br>зверху<br>справа</td>
+            </tr>
+            <tr>
+                <td class="valign-middle">middle</td>
+                <td class="align-left valign-middle">Текст посередині зліва</td>
+                <td class="align-center valign-middle">Текст посередині по центру</td>
+                <td class="align-right valign-middle">Текст посередині справа</td>
+            </tr>
+            <tr>
+                <td class="valign-bottom">bottom</td>
+                <td class="align-left valign-bottom">Текст<br>знизу<br>зліва</td>
+                <td class="align-center valign-bottom">Текст<br>знизу<br>по центру</td>
+                <td class="align-right valign-bottom">Текст<br>знизу<br>справа</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>caption-side</h2>
+    <div class="example-block">
+        <h3>caption-side: top</h3>
+        <table class="table-caption">
+            <caption>Список студентів групи</caption>
+            <tr>
+                <th>Ім'я</th>
+                <th>Оцінка</th>
+            </tr>
+            <tr>
+                <td>Студент 1</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Студент 2</td>
+                <td>88</td>
+            </tr>
+        </table>
+
+        <h3>caption-side: bottom</h3>
+        <table class="table-caption-bottom">
+            <caption>* Дані станом на грудень 2024</caption>
+            <tr>
+                <th>Ім'я</th>
+                <th>Оцінка</th>
+            </tr>
+            <tr>
+                <td>Студент 1</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Студент 2</td>
+                <td>88</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>empty-cells</h2>
+    <div class="example-block">
+        <h3>empty-cells: show</h3>
+        <table class="table-empty-cells">
+            <tr>
+                <td>Дані</td>
+                <td></td>
+                <td>Дані</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Дані</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h3>empty-cells: hide (з border-collapse: separate)</h3>
+        <table class="table-empty-hide">
+            <tr>
+                <td>Дані</td>
+                <td></td>
+                <td>Дані</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Дані</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Кольорові рядки</h2>
+    <div class="example-block">
+        <table class="table-colored-rows">
+            <tr>
+                <th>Статус</th>
+                <th>Замовлення</th>
+                <th>Сума</th>
+            </tr>
+            <tr class="row-success">
+                <td>Успішно</td>
+                <td>#12345</td>
+                <td>500 грн</td>
+            </tr>
+            <tr class="row-warning">
+                <td>Очікує</td>
+                <td>#12346</td>
+                <td>750 грн</td>
+            </tr>
+            <tr class="row-danger">
+                <td>Скасовано</td>
+                <td>#12347</td>
+                <td>200 грн</td>
+            </tr>
+            <tr class="row-info">
+                <td>В обробці</td>
+                <td>#12348</td>
+                <td>1200 грн</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Кольорові колонки (nth-child)</h2>
+    <div class="example-block">
+        <table class="table-responsive-colors">
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+                <th>Колонка 4</th>
+            </tr>
+            <tr>
+                <td>Рожева</td>
+                <td>Зелена</td>
+                <td>Синя</td>
+                <td>Жовта</td>
+            </tr>
+            <tr>
+                <td>Дані</td>
+                <td>Дані</td>
+                <td>Дані</td>
+                <td>Дані</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Градієнтний заголовок</h2>
+    <div class="example-block">
+        <table class="table-gradient">
+            <tr>
+                <th>Товар</th>
+                <th>Ціна</th>
+                <th>Наявність</th>
+            </tr>
+            <tr>
+                <td>Книга</td>
+                <td>250 грн</td>
+                <td>В наявності</td>
+            </tr>
+            <tr>
+                <td>Ручка</td>
+                <td>15 грн</td>
+                <td>В наявності</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Закруглена таблиця (border-radius)</h2>
+    <div class="example-block">
+        <table class="table-rounded">
+            <tr>
+                <th>Назва</th>
+                <th>Значення</th>
+                <th>Статус</th>
+            </tr>
+            <tr>
+                <td>Параметр A</td>
+                <td>100</td>
+                <td>Активний</td>
+            </tr>
+            <tr>
+                <td>Параметр B</td>
+                <td>200</td>
+                <td>Неактивний</td>
+            </tr>
+            <tr>
+                <td>Параметр C</td>
+                <td>300</td>
+                <td>Активний</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Таблиця з тінню (box-shadow)</h2>
+    <div class="example-block">
+        <table class="table-shadow">
+            <tr>
+                <th>Проект</th>
+                <th>Дедлайн</th>
+                <th>Прогрес</th>
+            </tr>
+            <tr>
+                <td>Веб-сайт</td>
+                <td>15.01.2025</td>
+                <td>75%</td>
+            </tr>
+            <tr>
+                <td>Мобільний додаток</td>
+                <td>01.02.2025</td>
+                <td>40%</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Темна тема</h2>
+    <div class="example-block">
+        <table class="table-dark">
+            <tr>
+                <th>Сервер</th>
+                <th>IP адреса</th>
+                <th>Статус</th>
+            </tr>
+            <tr>
+                <td>Server-01</td>
+                <td>192.168.1.1</td>
+                <td>Online</td>
+            </tr>
+            <tr>
+                <td>Server-02</td>
+                <td>192.168.1.2</td>
+                <td>Offline</td>
+            </tr>
+            <tr>
+                <td>Server-03</td>
+                <td>192.168.1.3</td>
+                <td>Online</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Мінімалістична таблиця</h2>
+    <div class="example-block">
+        <table class="table-minimal">
+            <tr>
+                <th>Назва</th>
+                <th>Автор</th>
+                <th>Рік</th>
+            </tr>
+            <tr>
+                <td>Кобзар</td>
+                <td>Тарас Шевченко</td>
+                <td>1840</td>
+            </tr>
+            <tr>
+                <td>Тигролови</td>
+                <td>Іван Багряний</td>
+                <td>1944</td>
+            </tr>
+            <tr>
+                <td>Місто</td>
+                <td>Валер'ян Підмогильний</td>
+                <td>1928</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Об'єднання комірок (colspan, rowspan)</h2>
+    <div class="example-block">
+        <table class="table-basic">
+            <tr>
+                <th colspan="4">Розклад занять</th>
+            </tr>
+            <tr>
+                <th>Час</th>
+                <th>Понеділок</th>
+                <th>Вівторок</th>
+                <th>Середа</th>
+            </tr>
+            <tr>
+                <td rowspan="2">9:00</td>
+                <td>Математика</td>
+                <td>Фізика</td>
+                <td>Хімія</td>
+            </tr>
+            <tr>
+                <td>Лекція</td>
+                <td>Практика</td>
+                <td>Лабораторна</td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td colspan="2">Програмування</td>
+                <td>Англійська</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
